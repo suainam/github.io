@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://msuai.top/</loc>
+    <lastmod>2020-01-19T14:56:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/posts/</loc>
+    <lastmod>2020-01-19T14:56:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/</loc>
+    <lastmod>2020-01-19T14:56:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/test/</loc>
+    <lastmod>2020-01-19T14:56:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/posts/test/</loc>
+    <lastmod>2020-01-19T09:27:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/%E5%90%8C%E6%AD%A5/</loc>
+    <lastmod>2020-01-19T09:27:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/%E6%8D%A2%E6%9C%BA/</loc>
+    <lastmod>2020-01-19T09:27:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/data/</loc>
+    <lastmod>2020-01-19T09:27:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/sql/</loc>
+    <lastmod>2020-01-19T09:27:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/posts/sql3min_001/</loc>
+    <lastmod>2020-01-19T09:27:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/about/</loc>
+    <lastmod>2020-01-19T14:56:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/posts/hello-world/</loc>
+    <lastmod>2020-01-19T14:56:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/about/</loc>
+    <lastmod>2020-01-19T09:27:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/categories/</loc>
+    <lastmod>2020-01-19T09:27:06+08:00</lastmod>
+  </url>
+  
+</urlset>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+    <title type="text">msuai&#39;s blog</title>
+    <subtitle type="html">学而不思则罔，思而不学则殆</subtitle>
+    <updated>2020-01-19T15:23:54+08:00</updated>
+    <id>https://msuai.top/</id>
+    <link rel="alternate" type="text/html" href="https://msuai.top/" />
+    <link rel="self" type="application/atom+xml" href="https://msuai.top/atom.xml" />
+    <author>
+            <name>suainam</name>
+            <uri>https://msuai.top/</uri>
+            
+                <email>suainam@gmail.com</email>
+            </author>
+    <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
+    <generator uri="https://gohugo.io/" version="0.62.2">Hugo</generator>
+        <entry>
+            <title type="text">TEST</title>
+            <link rel="alternate" type="text/html" href="https://msuai.top/posts/test/" />
+            <id>https://msuai.top/posts/test/</id>
+            <updated>2020-01-19T09:27:06+08:00</updated>
+            <published>2020-01-18T22:00:55+08:00</published>
+            <author>
+                    <name>suainam</name>
+                    <uri>https://mausi.top/</uri>
+                    <email>suainam@gmail.com</email>
+                    </author>
+            <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
+    
+    <summary type="html"><![CDATA[测试原则  不同主机，随时随地进行数据的更新和同步 脚本可以自动完成数据的一键提交 ……]]></summary>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/test/" term="TEST" label="TEST" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/%E6%8D%A2%E6%9C%BA/" term="换机" label="换机" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/%E5%90%8C%E6%AD%A5/" term="同步" label="同步" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">每日SQL三分钟_001</title>
+            <link rel="alternate" type="text/html" href="https://msuai.top/posts/sql3min_001/" />
+            <id>https://msuai.top/posts/sql3min_001/</id>
+            <updated>2020-01-19T09:27:06+08:00</updated>
+            <published>2020-01-17T10:51:42+08:00</published>
+            <author>
+                    <name>suainam</name>
+                    <uri>https://mausi.top/</uri>
+                    <email>suainam@gmail.com</email>
+                    </author>
+            <rights>保留文章链接及作者信息前提下，可转载和分享！</rights><summary type="html"><![CDATA[SQL 定义 怎么用]]></summary>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/sql/" term="SQL" label="SQL" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/data/" term="DATA" label="DATA" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Hello World</title>
+            <link rel="alternate" type="text/html" href="https://msuai.top/posts/hello-world/" />
+            <id>https://msuai.top/posts/hello-world/</id>
+            <updated>2020-01-19T14:56:54+08:00</updated>
+            <published>2020-01-14T09:48:23+08:00</published>
+            <author>
+                    <name>suainam</name>
+                    <uri>https://mausi.top/</uri>
+                    <email>suainam@gmail.com</email>
+                    </author>
+            <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
+    
+    <summary type="html"><![CDATA[前言  框架的选择：hugo 部署的选择：githubpages, Netlify, 参考 hugo 的 netlify 版块进行设计 本地预览和推送的测试 ……]]></summary>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/about/" term="ABOUT" label="ABOUT" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/test/" term="TEST" label="TEST" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
