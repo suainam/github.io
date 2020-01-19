@@ -52,7 +52,13 @@
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700|Source+Code+Pro:400,400i,700,700i&display=swap&subset=chinese-simplified" rel="stylesheet" />
 
     <meta name="author" content="suainam" />
-    <meta name="description" content="SQL 定义 怎么用" />
+    
+    
+    <meta name="description" content=" SQL 基本概念及语句的执行顺序、在线教程和练习网站
+ SQL 定义   Structured Query Language:
+  文档参考
+ 维基百科 wiki 语法参考 SQLSERVER Oracle Google BigQuery    关键字
+  1 2 3 4 5 6 7 8 9  with select distinct [case when then else end] asfrom(left|inner|right|full) [out] joinwhere and or in exists like|rlikegroup byhavingorder bylimitunion [all]   ……" />
     <meta name="keywords" content="sql, data" />
     
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
@@ -82,14 +88,14 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2020-01-17T10:51:42+08:00",
-        "dateModified": "2020-01-19T09:27:06+08:00",
+        "dateModified": "2020-01-19T18:32:16+08:00",
         "url": "https://msuai.top/posts/sql3min_001/",
         "headline": "每日SQL三分钟_001",
-        "description": "SQL 定义 怎么用",
+        "description": " SQL 基本概念及语句的执行顺序、在线教程和练习网站\n SQL 定义   Structured Query Language:\n  文档参考\n 维基百科 wiki 语法参考 SQLSERVER Oracle Google BigQuery    关键字\n  1 2 3 4 5 6 7 8 9  with select distinct [case when then else end] as\rfrom\r(left|inner|right|full) [out] join\rwhere and or in exists like|rlike\rgroup by\rhaving\rorder by\rlimit\runion [all]\r   ……",
         "keywords": "sql, data",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  6 ,
+        "wordCount":  191 ,
         "image": "https://msuai.top/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -133,13 +139,17 @@
 
 
 <meta property="og:title" content="每日SQL三分钟_001" />
-<meta property="og:description" content="SQL 定义 怎么用" />
+<meta property="og:description" content=" SQL 基本概念及语句的执行顺序、在线教程和练习网站
+ SQL 定义   Structured Query Language:
+  文档参考
+ 维基百科 wiki 语法参考 SQLSERVER Oracle Google BigQuery    关键字
+  1 2 3 4 5 6 7 8 9  with select distinct [case when then else end] asfrom(left|inner|right|full) [out] joinwhere and or in exists like|rlikegroup byhavingorder bylimitunion [all]   ……" />
 <meta property="og:url" content="https://msuai.top/posts/sql3min_001/" />
 <meta property="og:site_name" content="msuai&#39;s blog" />
 <meta property="og:locale" content="zh-CN" /><meta property="og:image" content="https://msuai.top/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-01-17T10:51:42+08:00" />
-    <meta property="article:modified_time" content="2020-01-19T09:27:06+08:00" />
+    <meta property="article:modified_time" content="2020-01-19T18:32:16+08:00" />
     
     <meta property="article:section" content="posts" />
     <meta property="article:tag" content="sql, data" />
@@ -230,7 +240,7 @@
     
     
         
-        <time datetime="2020-01-19T09:27:06+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020-01-19</time>
+        <time datetime="2020-01-19T18:32:16+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020-01-19</time>
     
     
     
@@ -254,7 +264,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;6</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;191</span>
     
     
         
@@ -273,10 +283,81 @@
                 <nav class="contents">
   <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
     <li><a id="contents:sql-定义" href="#sql-定义">SQL 定义</a></li>
-    <li><a id="contents:怎么用" href="#怎么用">怎么用</a></li>
+    <li><a id="contents:在线网站收集" href="#在线网站收集">在线网站收集</a></li>
   </ol>
-</nav><div class="post-body"><h2 id="sql-定义"><a href="#sql-定义" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:sql-定义" class="headings">SQL 定义</a></h2>
-<h2 id="怎么用"><a href="#怎么用" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:怎么用" class="headings">怎么用</a></h2></div>
+</nav><div class="post-body"><blockquote>
+<p>SQL 基本概念及语句的执行顺序、在线教程和练习网站</p>
+</blockquote>
+<h2 id="sql-定义"><a href="#sql-定义" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:sql-定义" class="headings">SQL 定义</a></h2>
+<ol>
+<li>
+<p>Structured Query Language:</p>
+<ul>
+<li>
+<p>文档参考</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SQL#Interoperability_and_standardization" target="_blank" rel="noopener">维基百科</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SQL_syntax" target="_blank" rel="noopener">wiki 语法参考</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/sql/?view=sql-server-ver15" target="_blank" rel="noopener">SQLSERVER</a></li>
+<li><a href="https://www.oracle.com/technetwork/cn/database/database-technologies/sql/documentation/index.html" target="_blank" rel="noopener">Oracle</a></li>
+<li><a href="https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql?hl=zh-cn" target="_blank" rel="noopener">Google BigQuery</a></li>
+</ul>
+</li>
+<li>
+<p>关键字</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">with</span> <span class="k">select</span> <span class="k">distinct</span> <span class="p">[</span><span class="k">case</span> <span class="k">when</span> <span class="k">then</span> <span class="k">else</span> <span class="k">end</span><span class="p">]</span> <span class="k">as</span>
+<span class="k">from</span>
+<span class="p">(</span><span class="k">left</span><span class="o">|</span><span class="k">inner</span><span class="o">|</span><span class="k">right</span><span class="o">|</span><span class="k">full</span><span class="p">)</span> <span class="p">[</span><span class="k">out</span><span class="p">]</span> <span class="k">join</span>
+<span class="k">where</span> <span class="k">and</span> <span class="k">or</span> <span class="k">in</span> <span class="k">exists</span> <span class="k">like</span><span class="o">|</span><span class="n">rlike</span>
+<span class="k">group</span> <span class="k">by</span>
+<span class="k">having</span>
+<span class="k">order</span> <span class="k">by</span>
+<span class="k">limit</span>
+<span class="k">union</span> <span class="p">[</span><span class="k">all</span><span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<!--more-->
+<ol start="2">
+<li>
+<p><strong class="emphasis-point">执行</strong><strong>顺序</strong>：</p>
+<p>(8)SELECT (9)DISTINCT (11)[Top_Num] [select_list]</p>
+<p>(1)FROM [left_table]</p>
+<p>(3)[join_type] JOIN [right_table]</p>
+<p>(2)ON [join_condition]</p>
+<p>(4)WHERE [where_condition]</p>
+<p>(5)GROUP BY [group_by_list]</p>
+<p>(6)WITH [CUBE|RollUP]</p>
+<p>(7)HAVING [having_condition]</p>
+<p>(10)ORDER BY [order_by_list]</p>
+</li>
+</ol>
+<h2 id="在线网站收集"><a href="#在线网站收集" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:在线网站收集" class="headings">在线网站收集</a></h2>
+<ol>
+<li><a href="https://sqlzoo.net/wiki/SELECT_basics" target="_blank" rel="noopener">SQLZOO</a>, 教程和在线练习</li>
+<li><a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in" target="_blank" rel="noopener">W3C</a>, 教程和在线练习</li>
+<li><a href="https://livesql.oracle.com/apex/f?p=590:1000" target="_blank" rel="noopener">Oracle</a>, 教程和在线练习， Oracle 数据库</li>
+<li><a href="https://www.jdoodle.com/execute-sql-online/" target="_blank" rel="noopener">jdoodle</a>, 包含各式在线的 ide</li>
+<li><a href="http://sqlfiddle.com/#!9/a6c585/1" target="_blank" rel="noopener">sqlfiddle</a>, 提供示例文件进行练习</li>
+<li><a href="https://sqliteonline.com" target="_blank" rel="noopener">Sqlite Browser</a>，包含 SQLite, MariaDB, PostgreSQL 和部分语法</li>
+</ol>
+</div>
 
         </article>
 
@@ -302,7 +383,7 @@
 
 
         
-    <div class="updated-badge-container"><div title="Updated @ 2020-01-19 09:27:06 CST" style="cursor:help;display:inline-block">
+    <div class="updated-badge-container"><div title="Updated @ 2020-01-19 18:32:16 CST" style="cursor:help;display:inline-block">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-19</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-19</text></g></svg></div></div>
 

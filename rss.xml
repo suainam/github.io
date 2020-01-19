@@ -23,7 +23,7 @@
         
             <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
         
-        <lastBuildDate>Sun, 19 Jan 2020 15:32:36 +0800</lastBuildDate>
+        <lastBuildDate>Sun, 19 Jan 2020 18:33:46 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="https://msuai.top/rss.xml" />
         
@@ -88,7 +88,13 @@
                     <author>suainam@gmail.com (suainam)</author>
                 
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
-                <description><![CDATA[SQL 定义 怎么用]]></description>
+                
+    
+    <description><![CDATA[SQL 基本概念及语句的执行顺序、在线教程和练习网站
+SQL 定义   Structured Query Language:
+文档参考
+维基百科 wiki 语法参考 SQLSERVER Oracle Google BigQuery    关键字
+1 2 3 4 5 6 7 8 9  with select distinct [case when then else end] asfrom(left|inner|right|full) [out] joinwhere and or in exists like|rlikegroup byhavingorder bylimitunion [all]   ……]]></description>
                 
                 
                 

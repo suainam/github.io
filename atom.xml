@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">msuai&#39;s blog</title>
     <subtitle type="html">学而不思则罔，思而不学则殆</subtitle>
-    <updated>2020-01-19T15:32:36+08:00</updated>
+    <updated>2020-01-19T18:33:46+08:00</updated>
     <id>https://msuai.top/</id>
     <link rel="alternate" type="text/html" href="https://msuai.top/" />
     <link rel="self" type="application/atom+xml" href="https://msuai.top/atom.xml" />
@@ -73,14 +73,20 @@
             <title type="text">每日SQL三分钟_001</title>
             <link rel="alternate" type="text/html" href="https://msuai.top/posts/sql3min_001/" />
             <id>https://msuai.top/posts/sql3min_001/</id>
-            <updated>2020-01-19T09:27:06+08:00</updated>
+            <updated>2020-01-19T18:32:16+08:00</updated>
             <published>2020-01-17T10:51:42+08:00</published>
             <author>
                     <name>suainam</name>
                     <uri>https://mausi.top/</uri>
                     <email>suainam@gmail.com</email>
                     </author>
-            <rights>保留文章链接及作者信息前提下，可转载和分享！</rights><summary type="html"><![CDATA[SQL 定义 怎么用]]></summary>
+            <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
+    
+    <summary type="html"><![CDATA[SQL 基本概念及语句的执行顺序、在线教程和练习网站
+SQL 定义   Structured Query Language:
+文档参考
+维基百科 wiki 语法参考 SQLSERVER Oracle Google BigQuery    关键字
+1 2 3 4 5 6 7 8 9  with select distinct [case when then else end] asfrom(left|inner|right|full) [out] joinwhere and or in exists like|rlikegroup byhavingorder bylimitunion [all]   ……]]></summary>
             
             
             
