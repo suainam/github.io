@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">msuai&#39;s blog</title>
     <subtitle type="html">学而不思则罔，思而不学则殆</subtitle>
-    <updated>2020-01-22T12:43:56+08:00</updated>
+    <updated>2020-01-22T13:15:21+08:00</updated>
     <id>https://msuai.top/</id>
     <link rel="alternate" type="text/html" href="https://msuai.top/" />
     <link rel="self" type="application/atom+xml" href="https://msuai.top/atom.xml" />
@@ -18,9 +18,9 @@
     <generator uri="https://gohugo.io/" version="0.62.2">Hugo</generator>
         <entry>
             <title type="text">问题收集</title>
-            <link rel="alternate" type="text/html" href="https://msuai.top/posts/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/" />
-            <id>https://msuai.top/posts/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/</id>
-            <updated>2020-01-22T12:42:13+08:00</updated>
+            <link rel="alternate" type="text/html" href="https://msuai.top/posts/questions_answers/" />
+            <id>https://msuai.top/posts/questions_answers/</id>
+            <updated>2020-01-22T12:55:49+08:00</updated>
             <published>2020-01-22T11:47:04+08:00</published>
             <author>
                     <name>suainam</name>
@@ -29,7 +29,7 @@
                     </author>
             <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
     
-    <summary type="html"><![CDATA[SSH Q1: ssh 连接提示：]]></summary>
+    <summary type="html"><![CDATA[SSH连接、网站搭建发布、学习过程中碰到的问题收集]]></summary>
             
             
             
@@ -77,9 +77,9 @@
     
         <entry>
             <title type="text">配置清单 Windwos软件</title>
-            <link rel="alternate" type="text/html" href="https://msuai.top/posts/%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95-windwos%E8%BD%AF%E4%BB%B6/" />
-            <id>https://msuai.top/posts/%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95-windwos%E8%BD%AF%E4%BB%B6/</id>
-            <updated>2020-01-21T18:49:40+08:00</updated>
+            <link rel="alternate" type="text/html" href="https://msuai.top/posts/windows_program_config/" />
+            <id>https://msuai.top/posts/windows_program_config/</id>
+            <updated>2020-01-22T13:07:30+08:00</updated>
             <published>2020-01-21T15:14:59+08:00</published>
             <author>
                     <name>suainam</name>
@@ -88,7 +88,7 @@
                     </author>
             <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
     
-    <summary type="html"><![CDATA[目的和原则  目的：做好软件的整理和归并，降低查找成本 原则：绿色>注册  按照重新配置新电脑的先后顺序进行排列……]]></summary>
+    <summary type="html"><![CDATA[记录电脑软件的搭配情况，确保高效、安全]]></summary>
             
             
             
@@ -130,9 +130,9 @@
     
         <entry>
             <title type="text">TEST</title>
-            <link rel="alternate" type="text/html" href="https://msuai.top/posts/test/" />
-            <id>https://msuai.top/posts/test/</id>
-            <updated>2020-01-19T09:27:06+08:00</updated>
+            <link rel="alternate" type="text/html" href="https://msuai.top/posts/test_differt_add/" />
+            <id>https://msuai.top/posts/test_differt_add/</id>
+            <updated>2020-01-22T13:10:57+08:00</updated>
             <published>2020-01-18T22:00:55+08:00</published>
             <author>
                     <name>suainam</name>
@@ -141,7 +141,7 @@
                     </author>
             <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
     
-    <summary type="html"><![CDATA[测试原则  不同主机，随时随地进行数据的更新和同步 脚本可以自动完成数据的一键提交 ……]]></summary>
+    <summary type="html"><![CDATA[尝试进行异地同步和部署]]></summary>
             
             
             
@@ -183,9 +183,9 @@
     
         <entry>
             <title type="text">每日SQL三分钟_001</title>
-            <link rel="alternate" type="text/html" href="https://msuai.top/posts/sql3min_001/" />
-            <id>https://msuai.top/posts/sql3min_001/</id>
-            <updated>2020-01-19T18:32:16+08:00</updated>
+            <link rel="alternate" type="text/html" href="https://msuai.top/posts/sql3m_001/" />
+            <id>https://msuai.top/posts/sql3m_001/</id>
+            <updated>2020-01-22T13:08:32+08:00</updated>
             <published>2020-01-17T10:51:42+08:00</published>
             <author>
                     <name>suainam</name>
@@ -194,11 +194,7 @@
                     </author>
             <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
     
-    <summary type="html"><![CDATA[SQL 基本概念及语句的执行顺序、在线教程和练习网站
-SQL 定义   Structured Query Language:
-文档参考
-维基百科 wiki 语法参考 SQLSERVER Oracle Google BigQuery    关键字
-1 2 3 4 5 6 7 8 9  with select distinct [case when then else end] asfrom(left|inner|right|full) [out] joinwhere and or in exists like|rlikegroup byhavingorder bylimitunion [all]   ……]]></summary>
+    <summary type="html"><![CDATA[记录SQL学习和使用过程中疑难重点]]></summary>
             
             
             
@@ -234,9 +230,9 @@ SQL 定义   Structured Query Language:
     
         <entry>
             <title type="text">Hello World</title>
-            <link rel="alternate" type="text/html" href="https://msuai.top/posts/hello-world/" />
-            <id>https://msuai.top/posts/hello-world/</id>
-            <updated>2020-01-22T12:39:17+08:00</updated>
+            <link rel="alternate" type="text/html" href="https://msuai.top/posts/hello_world/" />
+            <id>https://msuai.top/posts/hello_world/</id>
+            <updated>2020-01-22T13:05:44+08:00</updated>
             <published>2020-01-14T09:48:23+08:00</published>
             <author>
                     <name>suainam</name>
@@ -245,7 +241,7 @@ SQL 定义   Structured Query Language:
                     </author>
             <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
     
-    <summary type="html"><![CDATA[前言  框架的选择：hugo 部署的选择：githubpages, Netlify, 参考 hugo 的 netlify 版块进行设计 本地预览和推送的测试 ……]]></summary>
+    <summary type="html"><![CDATA[记录本博客基本的搭建发布过程]]></summary>
             
             
             

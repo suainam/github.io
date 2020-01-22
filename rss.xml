@@ -23,15 +23,15 @@
         
             <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
         
-        <lastBuildDate>Wed, 22 Jan 2020 12:43:56 +0800</lastBuildDate>
+        <lastBuildDate>Wed, 22 Jan 2020 13:15:21 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="https://msuai.top/rss.xml" />
         
         
             <item>
                 <title>问题收集</title>
-                <link>https://msuai.top/posts/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/</link>
-                <guid isPermaLink="true">https://msuai.top/posts/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/</guid>
+                <link>https://msuai.top/posts/questions_answers/</link>
+                <guid isPermaLink="true">https://msuai.top/posts/questions_answers/</guid>
                 <pubDate>Wed, 22 Jan 2020 11:47:04 +0800</pubDate>
                 
                     <author>suainam@gmail.com (suainam)</author>
@@ -39,7 +39,7 @@
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
     
-    <description><![CDATA[SSH Q1: ssh 连接提示：]]></description>
+    <description><![CDATA[SSH连接、网站搭建发布、学习过程中碰到的问题收集]]></description>
                 
                 
                 
@@ -87,8 +87,8 @@
         
             <item>
                 <title>配置清单 Windwos软件</title>
-                <link>https://msuai.top/posts/%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95-windwos%E8%BD%AF%E4%BB%B6/</link>
-                <guid isPermaLink="true">https://msuai.top/posts/%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95-windwos%E8%BD%AF%E4%BB%B6/</guid>
+                <link>https://msuai.top/posts/windows_program_config/</link>
+                <guid isPermaLink="true">https://msuai.top/posts/windows_program_config/</guid>
                 <pubDate>Tue, 21 Jan 2020 15:14:59 +0800</pubDate>
                 
                     <author>suainam@gmail.com (suainam)</author>
@@ -96,7 +96,7 @@
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
     
-    <description><![CDATA[目的和原则  目的：做好软件的整理和归并，降低查找成本 原则：绿色>注册  按照重新配置新电脑的先后顺序进行排列……]]></description>
+    <description><![CDATA[记录电脑软件的搭配情况，确保高效、安全]]></description>
                 
                 
                 
@@ -138,8 +138,8 @@
         
             <item>
                 <title>TEST</title>
-                <link>https://msuai.top/posts/test/</link>
-                <guid isPermaLink="true">https://msuai.top/posts/test/</guid>
+                <link>https://msuai.top/posts/test_differt_add/</link>
+                <guid isPermaLink="true">https://msuai.top/posts/test_differt_add/</guid>
                 <pubDate>Sat, 18 Jan 2020 22:00:55 +0800</pubDate>
                 
                     <author>suainam@gmail.com (suainam)</author>
@@ -147,7 +147,7 @@
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
     
-    <description><![CDATA[测试原则  不同主机，随时随地进行数据的更新和同步 脚本可以自动完成数据的一键提交 ……]]></description>
+    <description><![CDATA[尝试进行异地同步和部署]]></description>
                 
                 
                 
@@ -189,8 +189,8 @@
         
             <item>
                 <title>每日SQL三分钟_001</title>
-                <link>https://msuai.top/posts/sql3min_001/</link>
-                <guid isPermaLink="true">https://msuai.top/posts/sql3min_001/</guid>
+                <link>https://msuai.top/posts/sql3m_001/</link>
+                <guid isPermaLink="true">https://msuai.top/posts/sql3m_001/</guid>
                 <pubDate>Fri, 17 Jan 2020 10:51:42 +0800</pubDate>
                 
                     <author>suainam@gmail.com (suainam)</author>
@@ -198,11 +198,7 @@
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
     
-    <description><![CDATA[SQL 基本概念及语句的执行顺序、在线教程和练习网站
-SQL 定义   Structured Query Language:
-文档参考
-维基百科 wiki 语法参考 SQLSERVER Oracle Google BigQuery    关键字
-1 2 3 4 5 6 7 8 9  with select distinct [case when then else end] asfrom(left|inner|right|full) [out] joinwhere and or in exists like|rlikegroup byhavingorder bylimitunion [all]   ……]]></description>
+    <description><![CDATA[记录SQL学习和使用过程中疑难重点]]></description>
                 
                 
                 
@@ -238,8 +234,8 @@ SQL 定义   Structured Query Language:
         
             <item>
                 <title>Hello World</title>
-                <link>https://msuai.top/posts/hello-world/</link>
-                <guid isPermaLink="true">https://msuai.top/posts/hello-world/</guid>
+                <link>https://msuai.top/posts/hello_world/</link>
+                <guid isPermaLink="true">https://msuai.top/posts/hello_world/</guid>
                 <pubDate>Tue, 14 Jan 2020 09:48:23 +0800</pubDate>
                 
                     <author>suainam@gmail.com (suainam)</author>
@@ -247,7 +243,7 @@ SQL 定义   Structured Query Language:
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
     
-    <description><![CDATA[前言  框架的选择：hugo 部署的选择：githubpages, Netlify, 参考 hugo 的 netlify 版块进行设计 本地预览和推送的测试 ……]]></description>
+    <description><![CDATA[记录本博客基本的搭建发布过程]]></description>
                 
                 
                 
