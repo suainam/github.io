@@ -23,10 +23,61 @@
         
             <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
         
-        <lastBuildDate>Thu, 23 Jan 2020 11:47:46 +0800</lastBuildDate>
+        <lastBuildDate>Mon, 03 Feb 2020 16:42:12 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="https://msuai.top/rss.xml" />
         
+        
+            <item>
+                <title>SQL3min_002</title>
+                <link>https://msuai.top/learn/sql3m_002/</link>
+                <guid isPermaLink="true">https://msuai.top/learn/sql3m_002/</guid>
+                <pubDate>Wed, 22 Jan 2020 15:27:00 +0800</pubDate>
+                
+                    <author>suainam@gmail.com (suainam)</author>
+                
+                <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
+                
+    
+    <description><![CDATA[记录SQL学习和使用过程中疑难重点]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/sql/">SQL</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/data/">DATA</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/learn/">LEARN</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>RssHub Test</title>
@@ -38,47 +89,8 @@
                 
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
-                    <description><![CDATA[<h2 id="创建环境">创建环境</h2>
-<p>主要参考官网文档<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>和 RssHub<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>文档</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo curl -L <span class="s2">&#34;</span><span class="s2">https://github.com/docker/compose/releases/download/1.25.1/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&#34;</span> -o /usr/local/bin/docker-compose
-
-sudo chmod +x /usr/local/bin/docker-compose
-
-docker-compose --version
-
-apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
-
-<span class="c1"># 下一步未试验成功</span>
-add-apt-repository <span class="s2">&#34;deb [arch=amd64] https://download.docker.com/linux/debian \$(lsb_release -cs) stable&#34;</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p><a href="https://docs.docker.com/compose/install/#install-compose">Get Docker Engine</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p><a href="https://docs.rsshub.app">RSSHub</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>]]></description>
+    
+    <description><![CDATA[创建rsshub并实现订阅，实时查看]]></description>
                 
                 
                 
@@ -119,6 +131,63 @@ add-apt-repository <span class="s2">&#34;deb [arch=amd64] https://download.docke
             </item>
         
             <item>
+                <title>问题收集</title>
+                <link>https://msuai.top/learn/questions_answers/</link>
+                <guid isPermaLink="true">https://msuai.top/learn/questions_answers/</guid>
+                <pubDate>Wed, 22 Jan 2020 11:47:04 +0800</pubDate>
+                
+                    <author>suainam@gmail.com (suainam)</author>
+                
+                <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
+                
+    
+    <description><![CDATA[SSH连接、网站搭建发布、学习过程中碰到的问题收集]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/%E9%97%AE%E9%A2%98/">问题</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/question/">question</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/answer/">answer</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/%E8%A7%A3%E7%AD%94/">解答</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
                 <title>配置清单 Windows软件</title>
                 <link>https://msuai.top/conig/windows_program_config/</link>
                 <guid isPermaLink="true">https://msuai.top/conig/windows_program_config/</guid>
@@ -128,167 +197,8 @@ add-apt-repository <span class="s2">&#34;deb [arch=amd64] https://download.docke
                 
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
-                    <description><![CDATA[<h2 id="目的和原则">目的和原则</h2>
-<ol>
-<li>目的：做好软件的整理和归并，降低查找成本</li>
-<li>原则：绿色&gt;注册</li>
-</ol>
-<h2 id="按照重新配置新电脑的先后顺序进行排列">按照重新配置新电脑的先后顺序进行排列</h2>
-<h3 id="基本配置软件">基本配置软件</h3>
-<ul>
-<li>
-<p><a href="https://www.huorong.cn">火绒安全</a>, 静默拦截各式弹窗, 系统占用低</p>
-</li>
-<li>
-<p><a href="https://shurufa.baidu.com/">百度输入法</a>, 干净输入法</p>
-</li>
-<li>
-<p>飞扬时空(<a href="http://flyonzone.ys168.com/">http://flyonzone.ys168.com/</a>)</p>
-<ul>
-<li>Total Commander， 文件管理器，结合了各式的管理工具</li>
-<li>Faststone Capture，截图编辑工具</li>
-<li>Ditto， win7 下剪切板工具，省却反复粘贴操作</li>
-</ul>
-</li>
-<li>
-<p><a href="https://www.listary.com/">Listary</a>，快捷搜索和软件操作，可搭配 Total Commander 使用</p>
-</li>
-<li>
-<p>下载软件，搭配使用</p>
-<ul>
-<li><a href="https://aria2.github.io">aria2</a>，替代迅雷下载神器
-<ul>
-<li>懒人配置包 Aria2<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，放到专用文件夹，<strong>设置成随浏览器开启而启动</strong></li>
-</ul>
-</li>
-<li><a href="http://www.internetdownloadmanager.com/">Internet Download Manager</a>，最强下载工具，多功能，可注册..或者..</li>
-<li><a href="http://pandownload.com/">PanDownload</a>，部分需要从百度网盘下载，离线下载等软件</li>
-</ul>
-</li>
-<li>
-<p><a href="https://getquicker.net/Download">Quicker</a>，实现一些软件启动等操作，搭配 Total Commander 和沙拉查词 使用</p>
-</li>
-<li>
-<p>[天若 OCR]，图像识别</p>
-</li>
-<li>
-<p><a href="https://justgetflux.com">f.lux</a>，桌面色温自动调整</p>
-</li>
-<li>
-<p><a href="https://github.com/2dust/v2rayN">v2rayN</a>，V2ray 的使用，服务器搭建和公司内网穿透等，方便异地办公</p>
-<ul>
-<li>个人网盘<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，做了 Office16、git、v2raycore、hugo 的整合(qzq 的移动宽带没得下载)</li>
-</ul>
-</li>
-</ul>
-<h3 id="办公软件">办公软件</h3>
-<ul>
-<li>[Office]<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>,这个不需要介绍了</li>
-<li><a href="https://www.anaconda.com/distribution/#download-section">Anaconda</a>, 集成管理 python/nodejs/jupyternotebook 等</li>
-<li><a href="https://code.visualstudio.com">VScode</a>，地表最强编辑器，吹爆
-<ul>
-<li>插件 Settings Sync，第一时间下载同步上传设置</li>
-<li>VIM 输入法解决(<a href="https://github.com/VSCodeVim/Vim#input-method">https://github.com/VSCodeVim/Vim#input-method</a>)</li>
-<li>Fira Code 字体
-<ul>
-<li>下载字体：<a href="https://github.com/tonsky/FiraCode/releases">https://github.com/tonsky/FiraCode/releases</a></li>
-<li>安装：<a href="https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions">https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://git-scm.com/downloads">Git</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，并关联</li>
-<li><a href="https://github.com/gohugoio/hugo/releases">Hugo</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, 静态网页生成框架</li>
-<li><a href="https://www.netsarang.com/en/free-for-home-school/">Xshell&amp;XFtp</a>, ssh/ftp 连接管理</li>
-<li><a href="https://notepad-plus-plus.org/downloads/">Notepad++</a>，快速预览并进行编辑转码等</li>
-<li><a href="http://www.bahraniapps.com/apps/gifcam/gifcam.php%EF%BC%8Chttps://gifcam.en.softonic.com/">Gifcam</a>， 屏幕录制成 gif</li>
-<li><a href="https://github.com/QL-Win/QuickLook/releases">Quick Look</a>, 快速进行文件的预览</li>
-<li><a href="https://www.jianguoyun.com/s/downloads">坚果云</a>，自动同步工具</li>
-</ul>
-<h3 id="远端控制">远端控制</h3>
-<p>基本都是限制只能个人使用的</p>
-<ul>
-<li><a href="https://www.teamviewer.com">TeamViewer</a>，远程桌面管理，可以异地办公</li>
-<li><a href="https://anydesk.com/zhs/downloads">Anydesk</a>,直接进行下载安装，类似 Teamviewer
-<ul>
-<li>电源管理, 保证断电后自启
-<ul>
-<li>电脑待机，断电后自动还原系统的状态。进入 BIOS(DELETE/F2/F10 等)，设置随系统启动，还原系统状态</li>
-<li>保证无论是否登录，软件均启动（必要时，设置启动计划）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://sunlogin.oray.com/personal/download/">Sunlogin</a>,向日葵</li>
-<li><a href="https://www.realvnc.com/en/connect/">RealVNC</a>，TeamViewer 的替代品，可选家庭订阅，上限 5 人。需要服务端安装 Server，客户端按照 Viewer</li>
-</ul>
-<h3 id="google-浏览器">Google 浏览器</h3>
-<ul>
-<li>
-<p><a href="https://www.iplaysoft.com/tools/chrome/">谷歌浏览器 Chrome | 异次元软件</a></p>
-<ul>
-<li>
-<p><a href="https://greasyfork.org/zh-CN/scripts/382927-%E9%9B%86%E8%A3%85%E7%AE%B1">集装箱</a>，集合了网盘、优惠购、右键增强、下载卫士及上网工具</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd">Lastpass</a>，密码管理软件，免费版打通了浏览器和移动端</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc">Surfingkeys</a>，vim 对浏览器进行控制</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a>，篡改猴，脚本管理器，脚本稍后再进行更新</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall">OneTab</a>，一键保存访问的网页链接</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/klbibkeccnjlkjkiokjodocebajanakg">The Great Suspender</a></p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a>，对网页元素进行管理</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/google-keep-chrome-extens/lpcaedmchfhocbbapmcbpinfpgnhiddi">Google Keep</a>，随时随地进行 google keep 记录</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj">Pocket</a>，对暂不访问的网页进行保存</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/ie-tab/hehijbfgiekmjfkfjpbkbammjbdenadd">IE Tab</a>，适应部分 IE 专用网页</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/reggy/pnneajlgffpejnabhionnhdfhibijihe">Reggy</a>，多个邮箱备用</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D-%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/cdonnmffkdaoajfknoeeecmchibpmkmg?hl=en">沙拉查词</a>，桌面和浏览器翻译，教程详见<a href="https://saladict.crimx.com/manual.html">沙拉查词使用方式</a>，可配合 Quick(#Quick) 使用</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/nooboss/aajodjghehmlpahhboidcpfjcncmcklf">Nooboss</a>, 扩展管理</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/advanced-font-settings/caclkomlalccbpcdllchkeecicepbmbm">Advanced Font Setting</a>，字体替换管理</p>
-</li>
-<li>
-<p><a href="https://chrome.google.com/webstore/detail/aria2-for-chrome/mpkodccbngfoacfalldjimigbofkhgjn">Aria2</a>（配合 Aria2(#下载 Aria2)使用），aria2 下载</p>
-</li>
-<li>
-<p>登录账号，进行设置的同步</p>
-</li>
-</ul>
-</li>
-</ul>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>知乎专栏介绍<a href="https://zhuanlan.zhihu.com/p/37021947">https://zhuanlan.zhihu.com/p/37021947</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p><a href="https://pan.baidu.com/disk/home#/all?vmode=list&amp;path=%2F%E8%BD%AC%E5%AD%98">百度网盘</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>]]></description>
+    
+    <description><![CDATA[记录电脑软件的搭配情况，确保高效、安全]]></description>
                 
                 
                 
@@ -338,21 +248,8 @@ add-apt-repository <span class="s2">&#34;deb [arch=amd64] https://download.docke
                 
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
-                    <description><![CDATA[<h2 id="测试目标">测试目标</h2>
-<ol>
-<li>不同主机，随时随地进行数据的更新和同步</li>
-<li>自动对拉取数据进行检测，自动拉取主题
-<ul>
-<li>生成一键脚本来检测 themes 文件夹，如果主题文件夹为空，则进行相关主题拉取</li>
-</ul>
-</li>
-<li>脚本可以自动完成数据的一键提交, 数据的分发和同步</li>
-</ol>
-<h2 id="结果">结果</h2>
-<ol>
-<li>拉取和提交测试成功</li>
-<li>主题拉取需要在进行脚本的试验</li>
-</ol>]]></description>
+    
+    <description><![CDATA[尝试进行异地同步和部署]]></description>
                 
                 
                 
@@ -393,6 +290,51 @@ add-apt-repository <span class="s2">&#34;deb [arch=amd64] https://download.docke
             </item>
         
             <item>
+                <title>每日SQL三分钟_001</title>
+                <link>https://msuai.top/learn/sql3m_001/</link>
+                <guid isPermaLink="true">https://msuai.top/learn/sql3m_001/</guid>
+                <pubDate>Fri, 17 Jan 2020 10:51:42 +0800</pubDate>
+                
+                    <author>suainam@gmail.com (suainam)</author>
+                
+                <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
+                
+    
+    <description><![CDATA[记录SQL学习和使用过程中疑难重点]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/sql/">SQL</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/data/">DATA</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
                 <title>Hello World</title>
                 <link>https://msuai.top/conig/hello_world/</link>
                 <guid isPermaLink="true">https://msuai.top/conig/hello_world/</guid>
@@ -402,124 +344,8 @@ add-apt-repository <span class="s2">&#34;deb [arch=amd64] https://download.docke
                 
                 <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
                 
-                    <description><![CDATA[<h2 id="前言">前言</h2>
-<ol>
-<li>框架的选择：<a href="https://gohugo.io/documentation">hugo</a></li>
-<li>部署的选择：GithubPages, <a href="https://www.netlify.com">Netlify</a>, 参考 hugo 的 netlify 版块进行设计</li>
-</ol>
-<ol start="3">
-<li>
-<p>VPS、Domain、CDN：</p>
-<ul>
-<li>
-<p>服务器</p>
-<ul>
-<li><a href="https://justhost.ru/vps_service/control/135328">JustHosts</a>, 年付$16 左右</li>
-<li><a href="https://pacificrack.com/portal/clientarea.php?action=productdetails&amp;id=6768">Pacificrack</a>, 年付$8 左右</li>
-<li><a href="https://console.cloud.google.com/home/dashboard?project=northern-syntax-265202">GoogleCloud</a>, $300free</li>
-</ul>
-</li>
-<li>
-<p>Domain</p>
-<ul>
-<li><a href="https://cloud.baidu.com/product/bcd.html">BDC</a>, 赶上活动 10 年域名较便宜</li>
-<li><a href="http://www.freenom.com/zh/index.html">Freenom</a>, 12 月维护一次的，free
-<ul>
-<li>注册信息和 ip 地址要一致。国际网快一些，国内网打开较慢</li>
-<li>域名下要有网站, 可能会被回收</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>解析和 CDN</p>
-<ul>
-<li><a href="https://dash.cloudflare.com/d95ab0d92c03fe89126d294ef66ac1cd">CloudFlare</a>, 国际免费解析 CDN</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>本地预览和推送的测试</p>
-<ul>
-<li>
-<p><strong>代码</strong>：<code>import numpy as np</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>测试..公式..：$E=mc^2$</p>
-<p>$$E=mc^2$$</p>
-</li>
-<li>
-<p>测试锚点</p>
-<p><strong><a href="#%E7%9B%AE%E5%BD%95">↑ top</a></strong></p>
-</li>
-<li>
-<p>测试脚注, Markdown<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-</li>
-</ul>
-</li>
-<li>
-<p>修改 SVG、logo</p>
-<ul>
-<li>设计<a href="http://www.zuohaotu.com/svg/">SVG</a>, <a href="https://jakearchibald.github.io/svgomg/">压缩</a>, 编辑 svg, svg 添加<code>class=&quot;brand&quot;</code></li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">touch ./content/data/SVG.toml
-<span class="nv">brand</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c1"># 粘贴SVG</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>
-<p>设计 logo，上传<a href="https://realfavicongenerator.net/">https://realfavicongenerator.net/</a>进行编辑和压缩，下载后按以下操作</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">cp android-chrome-512x512.png ./static/icons
-cp apple-touch-icon.png ./static/icons
-cp mstile-150x150.png ./static/icons
-cp safari-pinned-tab.svg ./static/icons
-
-cp favicon.ico ./static
-cp site.webmanifest ./static <span class="o">&amp;&amp;</span> mv site.webmanifest manifest.json
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-</li>
-</ol>
-<h2 id="致谢">致谢</h2>
-<ol>
-<li>本主题使用了 Meme，感谢作者<a href="https://io-oi.me">reuixiy</a>, 参考了<a href="https://io-oi.me/tech/documentation-of-hugo-theme-meme">Hugo 主题 MemE 文档</a></li>
-</ol>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>Markdown 是一种纯文本标记语言 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>]]></description>
+    
+    <description><![CDATA[记录本博客基本的搭建发布过程]]></description>
                 
                 
                 
