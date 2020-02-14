@@ -3,48 +3,128 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://msuai.top/tags/data/</loc>
-    <lastmod>2020-01-22T15:46:37+08:00</lastmod>
+    <loc>https://msuai.top/conig/</loc>
+    <lastmod>2020-02-14T18:32:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://msuai.top/tags/learn/</loc>
-    <lastmod>2020-01-22T15:46:37+08:00</lastmod>
+    <loc>https://msuai.top/tags/dns/</loc>
+    <lastmod>2020-02-14T18:32:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://msuai.top/learn/</loc>
-    <lastmod>2020-02-07T18:35:03+08:00</lastmod>
+    <loc>https://msuai.top/tags/github/</loc>
+    <lastmod>2020-02-14T18:32:01+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://msuai.top/</loc>
-    <lastmod>2020-02-07T18:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://msuai.top/tags/sql/</loc>
-    <lastmod>2020-01-22T15:46:37+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://msuai.top/learn/sql3m_002/</loc>
-    <lastmod>2020-01-22T15:46:37+08:00</lastmod>
+    <lastmod>2020-02-14T18:32:01+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://msuai.top/tags/</loc>
-    <lastmod>2020-02-07T18:35:03+08:00</lastmod>
+    <lastmod>2020-02-14T18:32:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/%E6%B1%A1%E6%9F%93/</loc>
+    <lastmod>2020-02-14T18:32:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/conig/solve_dns_about_github/</loc>
+    <lastmod>2020-02-14T18:32:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/%E8%AE%BF%E9%97%AE%E6%85%A2/</loc>
+    <lastmod>2020-02-14T18:32:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/speed/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/vps/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/conig/speeder_vps/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/bt/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/cloudflare/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/%E5%8F%8D%E4%BB%A3/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/%E5%AE%9D%E5%A1%94/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/conig/btpanel_domain_proxy_with_cf/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/key/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/ssh/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/conig/connect_vps_with_key/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/data/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/learn/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/learn/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/tags/sql/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/learn/sql3m_002/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://msuai.top/tags/bulid/</loc>
     <lastmod>2020-01-23T11:06:32+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://msuai.top/conig/</loc>
-    <lastmod>2020-01-23T11:06:51+08:00</lastmod>
   </url>
   
   <url>
@@ -58,33 +138,28 @@
   </url>
   
   <url>
-    <loc>https://msuai.top/tags/vps/</loc>
-    <lastmod>2020-01-23T11:06:32+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://msuai.top/tags/answer/</loc>
-    <lastmod>2020-02-07T18:35:03+08:00</lastmod>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://msuai.top/tags/question/</loc>
-    <lastmod>2020-02-07T18:35:03+08:00</lastmod>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://msuai.top/conig/bulit_site_hist/</loc>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://msuai.top/tags/%E8%A7%A3%E7%AD%94/</loc>
-    <lastmod>2020-02-07T18:35:03+08:00</lastmod>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://msuai.top/tags/%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2020-02-07T18:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://msuai.top/learn/questions_answers/</loc>
-    <lastmod>2020-02-07T18:35:03+08:00</lastmod>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
   </url>
   
   <url>
@@ -144,7 +219,7 @@
   
   <url>
     <loc>https://msuai.top/about/</loc>
-    <lastmod>2020-01-22T13:14:17+08:00</lastmod>
+    <lastmod>2020-02-12T09:02:54+08:00</lastmod>
   </url>
   
   <url>

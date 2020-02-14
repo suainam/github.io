@@ -23,13 +23,223 @@
         
             <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
         
-        <lastBuildDate>Fri, 07 Feb 2020 18:35:51 +0800</lastBuildDate>
+        <lastBuildDate>Fri, 14 Feb 2020 18:32:18 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="https://msuai.top/rss.xml" />
         
         
             <item>
-                <title>SQL3min_002</title>
+                <title>解决Github DNS污染</title>
+                <link>https://msuai.top/conig/solve_dns_about_github/</link>
+                <guid isPermaLink="true">https://msuai.top/conig/solve_dns_about_github/</guid>
+                <pubDate>Fri, 14 Feb 2020 18:07:32 +0800</pubDate>
+                
+                    <author>suainam@gmail.com (suainam)</author>
+                
+                <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
+                
+    
+    <description><![CDATA[通过修改hosts来解决github访问缓慢、下载缓慢问题]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/github/">Github</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/dns/">DNS</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/%E8%AE%BF%E9%97%AE%E6%85%A2/">访问慢</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/%E6%B1%A1%E6%9F%93/">污染</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>加速算法_VPS</title>
+                <link>https://msuai.top/conig/speeder_vps/</link>
+                <guid isPermaLink="true">https://msuai.top/conig/speeder_vps/</guid>
+                <pubDate>Tue, 11 Feb 2020 15:44:55 +0800</pubDate>
+                
+                    <author>suainam@gmail.com (suainam)</author>
+                
+                <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
+                
+    
+    <description><![CDATA[记录vps的加速]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/speed/">speed</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/vps/">vps</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>宝塔面板域名使用CloudFlare进行隐藏</title>
+                <link>https://msuai.top/conig/btpanel_domain_proxy_with_cf/</link>
+                <guid isPermaLink="true">https://msuai.top/conig/btpanel_domain_proxy_with_cf/</guid>
+                <pubDate>Mon, 10 Feb 2020 13:04:16 +0800</pubDate>
+                
+                    <author>suainam@gmail.com (suainam)</author>
+                
+                <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
+                
+    
+    <description><![CDATA[使用CloudFlare进行宝塔面板域名的反代]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/bt/">BT</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/%E5%AE%9D%E5%A1%94/">宝塔</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/cloudflare/">CloudFlare</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/%E5%8F%8D%E4%BB%A3/">反代</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>通过密钥连接VPS</title>
+                <link>https://msuai.top/conig/connect_vps_with_key/</link>
+                <guid isPermaLink="true">https://msuai.top/conig/connect_vps_with_key/</guid>
+                <pubDate>Sun, 09 Feb 2020 01:15:30 +0800</pubDate>
+                
+                    <author>suainam@gmail.com (suainam)</author>
+                
+                <copyright>保留文章链接及作者信息前提下，可转载和分享！</copyright>
+                
+    
+    <description><![CDATA[通过密钥来连接VPS，提升安全性]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/ssh/">ssh</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/vps/">vps</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://msuai.top/tags/key/">key</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>每日SQL三分钟_002</title>
                 <link>https://msuai.top/learn/sql3m_002/</link>
                 <guid isPermaLink="true">https://msuai.top/learn/sql3m_002/</guid>
                 <pubDate>Wed, 22 Jan 2020 15:27:00 +0800</pubDate>
@@ -131,9 +341,9 @@
             </item>
         
             <item>
-                <title>问题收集</title>
-                <link>https://msuai.top/learn/questions_answers/</link>
-                <guid isPermaLink="true">https://msuai.top/learn/questions_answers/</guid>
+                <title>建站历程</title>
+                <link>https://msuai.top/conig/bulit_site_hist/</link>
+                <guid isPermaLink="true">https://msuai.top/conig/bulit_site_hist/</guid>
                 <pubDate>Wed, 22 Jan 2020 11:47:04 +0800</pubDate>
                 
                     <author>suainam@gmail.com (suainam)</author>

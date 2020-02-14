@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" /><meta name="theme-color" content="#fff" />
+        <script>
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === "dark") {
+                changeModeMeta("dark");
+            } else if (userPrefers === "light") {
+                changeModeMeta("light");
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta("dark");
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta("light");
+            }
+            function changeModeMeta() {
+                document.documentElement.setAttribute('data-theme', arguments[0]);
+                if (arguments[0] === "dark") {
+                    changeThemeColor("#1c1c21");
+                } else {
+                    changeThemeColor("#fff");
+                }
+            }
+            function changeThemeColor() {
+                document.querySelector('meta[name="theme-color"]').setAttribute('content', arguments[0]);
+            }
+        </script>
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta name="renderer" content="webkit" />
+
+    <meta name="generator" content="Hugo 0.62.2" />
+
+    <title>建站历程 | msuai&#39;s blog</title>
+
+    <link rel="stylesheet" href="/css/meme.min.2f0d9e67267b37b0c10f64903ca9dde2d48658b16c1a0045807081c8ddfe6fd7.css" integrity="sha256-Lw2eZyZ7N7DBD2SQPKnd4tSGWLFsGgBFgHCByN3+b9c=" data-instant-track />
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700|Source+Code+Pro:400,400i,700,700i&display=swap&subset=chinese-simplified" rel="stylesheet" />
+
+    <meta name="author" content="suainam" />
+    
+    
+    <meta name="description" content="SSH连接、网站搭建发布、学习过程中碰到的问题收集" />
+    <meta name="keywords" content="问题, question, answer, 解答" />
+    
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="msuai&#39;s blog" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="msuai&#39;s blog" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://msuai.top/conig/bulit_site_hist/" />
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-01-22T11:47:04+08:00",
+        "dateModified": "2020-02-12T09:02:54+08:00",
+        "url": "https://msuai.top/conig/bulit_site_hist/",
+        "headline": "建站历程",
+        "description": "SSH连接、网站搭建发布、学习过程中碰到的问题收集",
+        "keywords": "问题, question, answer, 解答",
+        "inLanguage" : "zh-CN",
+        "articleSection": "conig",
+        "wordCount":  1812 ,
+        "image": "https://msuai.top/icons/apple-touch-icon.png",
+        "author": {
+            "@type": "Person",
+            "description": "Stay Hungry, Stay Foolish!",
+            "email": "suainam@gmail.com",
+            "image": "https://msuai.top/icons/apple-touch-icon.png",
+            "url": "https://mausi.top/",
+            "name": "suainam"
+        },
+        "license": "保留文章链接及作者信息前提下，可转载和分享！",
+        "publisher": {
+            "@type": "Organization",
+            "name": "msuai's blog",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://msuai.top/icons/apple-touch-icon.png"
+            },
+            "url": "https://msuai.top/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://msuai.top/"
+        }
+    }
+</script>
+
+    
+
+
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@suainam" />
+<meta name="twitter:creator" content="@suainam" />
+
+    
+
+
+
+
+
+
+<meta property="og:title" content="建站历程" />
+<meta property="og:description" content="SSH连接、网站搭建发布、学习过程中碰到的问题收集" />
+<meta property="og:url" content="https://msuai.top/conig/bulit_site_hist/" />
+<meta property="og:site_name" content="msuai&#39;s blog" />
+<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="https://msuai.top/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-01-22T11:47:04+08:00" />
+    <meta property="article:modified_time" content="2020-02-12T09:02:54+08:00" />
+    
+    <meta property="article:section" content="conig" />
+    <meta property="article:tag" content="问题, question, answer, 解答" />
+
+        
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88915657-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-88915657-1');
+    </script>
+
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        <div class="site-brand">
+            
+            <a href="/"><svg width="250" height="100" xmlns="http://www.w3.org/2000/svg" class="brand"><path fill="none" d="M-1-1h252v102H-1z"/><g><text font-weight="bold" stroke="#000" transform="matrix(1.43232 0 0 1.37468 -40.228 -19.891)" font-family="League Gothic, sans-serif" font-size="21" y="47.519" x="44.508" stroke-opacity="null" stroke-width="0" fill="#fff">DataLearning</text><text font-family="Trebuchet MS, Gadget, sans-serif" font-size="13" y="74" x="51.062" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#fff">Stay Hungry, Stay Foolish</text></g></svg></a>
+            
+        </div>
+    </header>
+
+            
+            
+            
+    
+        
+            
+        
+        <div id="theme-toggle" onclick="modeSwitcher()">🌞</div>
+    
+
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        <article class="content post" data-type="conig">
+
+            <h1 class="post-title">建站历程</h1>
+
+            
+
+            
+                <div class="post-description">SSH连接、网站搭建发布、学习过程中碰到的问题收集</div>
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-01-22T11:47:04+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.1.22</time>
+    
+    
+        
+        <time datetime="2020-02-12T09:02:54+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.2.12</time>
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1812</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;4&nbsp;分钟</span>
+    
+    
+        
+            
+            <span class="post-meta-item busuanzi-page-pv" id="busuanzi_container_page_pv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_page_pv"></span></span>
+        
+    
+</div>
+            
+
+            
+                <nav class="contents">
+  <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
+    <li><a id="contents:在主机vps搭建网站" href="#在主机vps搭建网站">在主机(VPS)搭建网站</a>
+      <ol>
+        <li><a id="contents:建站前配置" href="#建站前配置">建站前配置</a></li>
+        <li><a id="contents:搭建网站" href="#搭建网站">搭建网站</a>
+          <ol>
+            <li><a id="contents:lnmp" href="#lnmp">LNMP</a></li>
+            <li><a id="contents:caddyphp" href="#caddyphp">Caddy+php</a></li>
+            <li><a id="contents:安装-webserver" href="#安装-webserver">安装 webserver</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a id="contents:使用-github-和-netlify-搭建静态网页" href="#使用-github-和-netlify-搭建静态网页">使用 Github 和 Netlify 搭建静态网页</a></li>
+    <li><a id="contents:docker-安装网站等一系列" href="#docker-安装网站等一系列">Docker 安装网站等一系列</a></li>
+  </ol>
+</nav><div class="post-body"><h2 id="在主机vps搭建网站"><a href="#在主机vps搭建网站" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:在主机vps搭建网站" class="headings">在主机(VPS)搭建网站</a></h2>
+<p><strong>默认按照 Debian 进行, 默认为 root 权限，如果其他用户，在前面添加<code>sudo</code></strong></p>
+<!--more-->
+<h3 id="建站前配置"><a href="#建站前配置" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:建站前配置" class="headings">建站前配置</a></h3>
+<p>Q1: ssh 连接提示：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">Connecting to xx.xx.xx.xx:xx... Connection established.
+To escape to <span class="nb">local</span> shell, press <span class="s1">&#39;Ctrl+Alt+]&#39;</span>.
+Connection closing...Socket close. Connection closed by foreign host.
+Disconnected from remote host<span class="o">(</span>pr<span class="o">)</span> at 11:38:50.
+</code></pre></td></tr></table>
+</div>
+</div><p>A1: 可能是 SSH 服务器没设置保活时间间隔<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">[1]</a></sup>，设置属性解释<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">echo</span> <span class="s2">&#34;
+</span><span class="s2">ClientAliveInterval 60
+</span><span class="s2">ClientAliveCountMax 3
+</span><span class="s2">&#34;</span> &gt;&gt; /etc/ssh/sshd_config <span class="o">&amp;&amp;</span> systemctl restart sshd
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>如果需要安装宝塔，需要在此处开始!!!</strong></p>
+<p><strong>如果需要安装宝塔，需要在此处开始!!!</strong></p>
+<p><strong>如果需要安装宝塔，需要在此处开始!!!</strong></p>
+<p>参考<a href="https://www.bt.cn/bbs/thread-19376-1-1.html" target="_blank" rel="noopener">宝塔 Linux 面板安装教程</a></p>
+<p>Q2: 进行系统的更新升级及必要程序的安装（vim/curl/wget/screen), 对 vim 设置行号、大小写查询转换、tab 宽度等<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup></p>
+<p>A2: 执行以下的脚本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">apt-get update -y <span class="o">&amp;&amp;</span> apt-get upgrade -y <span class="o">&amp;&amp;</span> apt-get install -y vim wget screen curl <span class="o">&amp;&amp;</span>
+<span class="nb">echo</span> <span class="s2">&#34;syntax on
+</span><span class="s2">set smartcase
+</span><span class="s2">set number
+</span><span class="s2">set shiftwidth=4
+</span><span class="s2">set tabstop=4
+</span><span class="s2">set expandtab
+</span><span class="s2">&#34;</span> &gt;&gt; /etc/vim/vimrc <span class="o">&amp;&amp;</span> tail /etc/vim/vimrc
+</code></pre></td></tr></table>
+</div>
+</div><p>Q3: 修改 python 的默认软链接</p>
+<p>A3:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ln -sf /usr/bin/python3 /usr/bin/python <span class="o">&amp;&amp;</span> python --version
+<span class="c1"># apt-get install python3-pip &amp;&amp; pip3 --version</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Q4: install v2ray</p>
+<p>A4:
+233script，这个可以后面另开叙述，此处仅供备用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">bash &lt;<span class="o">(</span>curl -s -L https://git.io/v2ray.sh<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="搭建网站"><a href="#搭建网站" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:搭建网站" class="headings">搭建网站</a></h3>
+<p>选择 LNMP 或者 Caddy 均可，500M 以上内存建议 LNMP， 仅供参考</p>
+<h4 id="lnmp"><a href="#lnmp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:lnmp" class="headings">LNMP</a></h4>
+<p>参考<a href="https://lnmp.org/install.html" target="_blank" rel="noopener">lnmp.org</a>的安装教程，在此只提供必要的说明。
+在<a href="https://lnmp.org/auto.html" target="_blank" rel="noopener">lnmp.org.auto</a>按照自己 vps 的情况，内存分配器可以选<code>jemalloc</code>，生成一键脚本, 进行安装</p>
+<ol>
+<li>创建虚拟机，并添加泛域名解析。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">lnmp vhost add
+<span class="c1"># xxx.site</span>
+<span class="c1"># *.xxx.site</span>
+
+<span class="c1">#删除虚拟机，</span>
+<span class="c1"># lnmp vhost del</span>
+<span class="c1"># chattr -i /home/wwwroot/msuai.top/.user.ini</span>
+<span class="c1"># rm -rf /home/wwwroot/msuai.top</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>cf 进行泛域名解析</li>
+</ol>
+<p>cloudflare 进行域名的绑定和解析，然后 ssl 里面先选程 flexible 模式，获得 CF_key, CF_pem</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">CF_Key</span><span class="o">=</span><span class="s2">&#34;xxxxxx&#34;</span>
+<span class="nb">export</span> <span class="nv">CF_Email</span><span class="o">=</span><span class="s2">&#34;xxxxxx&#34;</span>
+
+lnmp dnsssl cf
+</code></pre></td></tr></table>
+</div>
+</div><p>此处使用 globe key, 可以安装成功。
+如果要将 flexible 改成 full 或者 full(strict)，需要更多的配置，暂时没有测试完毕，<em>可参考文档</em><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup></p>
+<ol start="3">
+<li>修改 nginx.conf 里面的配置，添加一下<code>include</code>内容， 并测试重启 nginx 服务<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup>, 访问域名，不再显示<code>nginx welcome</code>
+但也不是 ip 探针、phpmyadmin 等内容</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">include vhost/*.conf
+
+<span class="c1"># 测试nginx， 并重启</span>
+nginx -t
+/etc/init.d/nginx reload
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>配置多站点, 安装虚拟机，进行解析和网站目录的设置</li>
+</ol>
+<h4 id="caddyphp"><a href="#caddyphp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:caddyphp" class="headings">Caddy+php</a></h4>
+<p>参考<a href="https://www.moerats.com/archives/651/" target="_blank" rel="noopener">小内存 VPS 安装 Caddy+PHP 7+Sqlite 3 环境，并快速搭建 Typecho 博客</a>，可以成功安装</p>
+<p>只能先使用 flexible 模式。
+如果使用了 cloudflare 的严格模式，一直出现 521 错误，即使加了插件和 tls，也出错，目前没有找到更好的解决办法，需要后续再来解决<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">apt-get install php7.0-cgi php7.0-fpm php7.0-curl php7.0-gd php7.0-mbstring php7.0-xml php7.0-sqlite3 sqlite3 -y
+
+<span class="c1"># install caddy with doubi</span>
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh <span class="o">&amp;&amp;</span>
+chmod +x caddy_install.sh <span class="o">&amp;&amp;</span> bash caddy_install.sh install
+<span class="c1"># tls.dns.cloudflare</span>
+
+<span class="c1"># 编辑Caddyfile</span>
+<span class="nb">echo</span> <span class="s2">&#34;http://xxx.site {
+</span><span class="s2">    redir https://www.xxx.site{url}
+</span><span class="s2">    }
+</span><span class="s2">    https://www.xxx.site {
+</span><span class="s2">    gzip
+</span><span class="s2">    root /yoursite_pwd
+</span><span class="s2">    # tls {
+</span><span class="s2">    #     dns cloudflare
+</span><span class="s2">    # }
+</span><span class="s2">    fastcgi / /run/php/php7.0-fpm.sock php
+</span><span class="s2">    rewrite {
+</span><span class="s2">        if {path} not_match ^\/admin
+</span><span class="s2">        to {path} {path}/ /index.php?{query}
+</span><span class="s2">     }
+</span><span class="s2">}&#34;</span> &gt; /usr/local/caddy/Caddyfile
+
+<span class="c1"># 重启caddy</span>
+/etc/init.d/caddy restart
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="安装-webserver"><a href="#安装-webserver" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:安装-webserver" class="headings">安装 webserver</a></h4>
+<p>默认网站目录为 $YWS, 执行完 shell 脚本，打开域名即可安装</p>
+<ol>
+<li>
+<p>安装文件</p>
+<ul>
+<li>安装 WordPress, 比如 <code>$YWS = wp.xxx.site</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># 如果需要重装，只需要删除里面的`wp-config.php`即可[，相关的数据库进行清理]</span>
+<span class="nb">cd</span> <span class="nv">$YWS</span>
+wget https://cn.wordpress.org/latest-zh_CN.tar.gz <span class="o">&amp;&amp;</span> tar zxvf latest* <span class="o">&amp;&amp;</span> mv ./wordpress/* ./ <span class="o">&amp;&amp;</span>
+rm -rf latest* wordpress/ <span class="o">&amp;&amp;</span> chmod -R <span class="m">755</span> ./ <span class="o">&amp;&amp;</span> chown www:www -R ./*
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>安装 Typecho, 比如 <code>$YWS = tp.xxx.site</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> <span class="nv">$YWS</span>
+<span class="c1">#以下为最新稳定版</span>
+wget http://typecho.org/downloads/1.1-17.10.30-release.tar.gz <span class="o">&amp;&amp;</span> tar zxvf 1.1* <span class="o">&amp;&amp;</span> mv ./build/* ./ <span class="o">&amp;&amp;</span>
+rm -rf 1.1* buil* <span class="o">&amp;&amp;</span> chmod -R <span class="m">755</span> ./* <span class="o">&amp;&amp;</span> chown www:www -R ./*
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>安装 Zblog, 比如 <code>$YWS = zg.xxx.site</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> <span class="nv">$YWS</span>
+wget https://update.zblogcn.com/zblogphp/install.tar.gz <span class="o">&amp;&amp;</span> tar -xf ./install.tar.gz <span class="o">&amp;&amp;</span> rm -rf ./install.tar.gz <span class="o">&amp;&amp;</span>
+chmod -R <span class="m">755</span> ./* <span class="o">&amp;&amp;</span> chown www:www -R ./*
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>FAQ</p>
+<p>Q1: 在设置中开启了站点的<code>https</code>，出现重定向循环</p>
+<p>A1: 修改 wordpress 根目录($YWS)的 wp-config.php，在 &lt;?php 后其添加如下代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">$_SERVER</span><span class="o">[</span><span class="s1">&#39;HTTPS&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span><span class="p">;</span>
+define<span class="o">(</span><span class="s1">&#39;FORCE_SSL_LOGIN&#39;</span>, <span class="nb">true</span><span class="o">)</span><span class="p">;</span>
+define<span class="o">(</span><span class="s1">&#39;FORCE_SSL_ADMIN&#39;</span>, <span class="nb">true</span><span class="o">)</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Q2: 找到适配 typecho&amp;wordpress 的主题</p>
+<p>A2：</p>
+<ul>
+<li>
+<p>typecho 主题参考</p>
+<p><a href="https://typecho.me/1231.html" target="_blank" rel="noopener">PureLove 小清新风格 - Typecho 主题模板站</a></p>
+<p><a href="https://typecho.me/1036.html" target="_blank" rel="noopener">Bigfa 简约但精致的主题 - Typecho 主题模板站</a></p>
+<p><a href="https://vircloud.net/default/change-theme.html" target="_blank" rel="noopener">ArmxMod for Typecho - Typecho 个性化响应式自适应主题</a></p>
+<p><a href="https://www.boxmoe.com/358.html" target="_blank" rel="noopener">AL_lolimeow 主题 for Typecho 版-盒子萌</a></p>
+<p><a href="https://github.com/chanshiyucx/aurora" target="_blank" rel="noopener">Aurora</a></p>
+</li>
+<li>
+<p>wordpress 主题参考</p>
+<p><a href="https://github.com/mashirozx/Sakura" target="_blank" rel="noopener">Sakura</a></p>
+<p><del><a href="https://github.com/mashirozx/Sakura2" target="_blank" rel="noopener">Sakura2</a>，该主题不可用</del></p>
+<p><a href="https://github.com/galnetwen/H-Siren" target="_blank" rel="noopener">H-Siren</a></p>
+<p><a href="https://www.boxmoe.com/222.html" target="_blank" rel="noopener">Lolimeow</a></p>
+<p><a href="https://sn9.us/file/3494484-409609196" target="_blank" rel="noopener">Rabbit3.0</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="使用-github-和-netlify-搭建静态网页"><a href="#使用-github-和-netlify-搭建静态网页" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:使用-github-和-netlify-搭建静态网页" class="headings">使用 Github 和 Netlify 搭建静态网页</a></h2>
+<p>分别使用仓库对 githubpages 和 <a href="https://www.netlify.com" target="_blank" rel="noopener">Netlify</a> 搭建，域名使用 <a href="https://dash.cloudflare.com" target="_blank" rel="noopener">Cloudflare</a>进行设置解析，遇到以下问题：</p>
+<ul>
+<li>q1: 网页没有格式，css 无法进行网页的生成。F12 查看网页 css 代码发现：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">  Failed to find a valid digest in the <span class="s1">&#39;integrity&#39;</span> attribute <span class="k">for</span> resource <span class="s1">&#39;https://xxxxx.ga/css/xx.css&#39;</span> <span class="o">&amp;&amp;</span>
+  with computed SHA-256 integrity <span class="s1">&#39;Df4VYwE3+jo4Q=&#39;</span>. The resource has been blocked.
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>a1: 解决方法： 关闭 Cloudflare 的 css/js/html 数据压缩</p>
+</li>
+<li>
+<p>q2: <a href="https://www.netlify.com" target="_blank" rel="noopener">Netlify</a>中使用 hugo 进行静态网页制作，其中对 theme 进行<code>git submodule add</code>订阅，异地进行数据更新维护时，发现本地无法进行预览，缺少模板文件（template、html 等等，提示需要进行模板文件的创建）</p>
+</li>
+<li>
+<p>a2: 本地的 clone 的主题文件夹为空，需要清理后，重新订阅主题，才能正确进行预览</p>
+</li>
+</ul>
+<h2 id="docker-安装网站等一系列"><a href="#docker-安装网站等一系列" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:docker-安装网站等一系列" class="headings">Docker 安装网站等一系列</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># install docker</span>
+<span class="c1"># 参考 &lt;https://zhuanlan.zhihu.com/p/93839317&gt;</span>
+apt-get remove docker docker-engine docker.io
+curl -fsSL get.docker.com -o get-docker.sh <span class="o">&amp;&amp;</span> sh get-docker.sh
+pip install docker-compose
+
+mkdir -p ./composet_demo/docker
+
+<span class="nb">echo</span> <span class="s2">&#34;
+</span><span class="s2">version: &#39;3&#39;
+</span><span class="s2">
+</span><span class="s2">services:
+</span><span class="s2">    caddy:
+</span><span class="s2">        image: abiosoft/caddy
+</span><span class="s2">        ports:
+</span><span class="s2">            - &#34;</span>80:80<span class="s2">&#34;
+</span><span class="s2">            - &#34;</span>443:443<span class="s2">&#34;
+</span><span class="s2">        volumes:
+</span><span class="s2">            - ./path/to/your/Caddyfile:/etc/Caddyfile
+</span><span class="s2">            - /path/to/certificate/.caddy:/root/.caddy
+</span><span class="s2">            - /your/site/root:/srv
+</span><span class="s2">        restart: always
+</span><span class="s2">        environment:
+</span><span class="s2">            - CLOUDFLARE_EMAIL=your_email_here
+</span><span class="s2">            - CLOUDFLARE_API_KEY=your_api_key
+</span><span class="s2">            - ACME_AGREE=true
+</span><span class="s2">            - TZ=Asia/Shanghai
+</span><span class="s2">        networks:
+</span><span class="s2">            - frontend
+</span><span class="s2">
+</span><span class="s2">    db:
+</span><span class="s2">        image: mysql:5.7
+</span><span class="s2">        volumes:
+</span><span class="s2">            - ./path/to/database:/var/lib/mysql
+</span><span class="s2">        restart: always
+</span><span class="s2">        expose:
+</span><span class="s2">            - &#34;</span>3306<span class="s2">&#34;
+</span><span class="s2">        environment:
+</span><span class="s2">            - MYSQL_ROOT_PASSWORD=password
+</span><span class="s2">            - MYSQL_DATABASE=typecho
+</span><span class="s2">            - MYSQL_USER=typecho
+</span><span class="s2">            - MYSQL_PASSWORD=password
+</span><span class="s2">            - TZ=Asia/Shanghai
+</span><span class="s2">        networks:
+</span><span class="s2">            - frontend
+</span><span class="s2">
+</span><span class="s2">    php:
+</span><span class="s2">        image: php:fpm
+</span><span class="s2">        volumes:
+</span><span class="s2">            - /your/site/root:/var/www/html
+</span><span class="s2">        restart: always
+</span><span class="s2">        expose:
+</span><span class="s2">            - &#34;</span>9000<span class="s2">&#34;
+</span><span class="s2">        environment:
+</span><span class="s2">            - TZ=Asia/Shanghai
+</span><span class="s2">        depends_on:
+</span><span class="s2">            - db
+</span><span class="s2">            - caddy
+</span><span class="s2">        networks:
+</span><span class="s2">            - frontend
+</span><span class="s2">
+</span><span class="s2">networks:
+</span><span class="s2">    frontend:
+</span><span class="s2">&#34;</span> &gt; ./composet_demo/docker/docker-compose.yml
+</code></pre></td></tr></table>
+</div>
+</div><p>未完待续</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://tojohnonly.github.io/81-%E8%A7%A3%E5%86%B3%20SSH%20Connection%20closed%20by%20foreign%20host%20%E9%97%AE%E9%A2%98.html" target="_blank" rel="noopener">解决 SSH Connection closed by foreign host 问题</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://unix.stackexchange.com/questions/3026/what-options-serveraliveinterval-and-clientaliveinterval-in-sshd-config-exac" target="_blank" rel="noopener">What options `ServerAliveInterval` and `ClientAliveInterval` in sshd_config exactly do?</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces" target="_blank" rel="noopener">REDEFINE-TAB-AS-4-SPACES</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://support.cloudflare.com/hc/zh-cn/articles/115000479507" target="_blank" rel="noopener">CloudFlare 证书配置</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://stackoverflow.com/questions/14460935/nginx-only-shows-welcome-page" target="_blank" rel="noopener">NGINX-ONLY-SHOWS-WELCOME-PAGE</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+</ol>
+</section>
+</div>
+
+        </article>
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+    <footer class="minimal-footer">
+        
+            
+            <div class="post-tag"><a href="/tags/%E9%97%AE%E9%A2%98/" rel="tag" class="post-tag-link">#问题</a> <a href="/tags/question/" rel="tag" class="post-tag-link">#question</a> <a href="/tags/answer/" rel="tag" class="post-tag-link">#answer</a> <a href="/tags/%E8%A7%A3%E7%AD%94/" rel="tag" class="post-tag-link">#解答</a></div>
+        
+        
+            <div class="post-category">
+                <a href="/conig/" class="post-category-link active">conig</a> | <a href="/learn/" class="post-category-link">learn</a>
+            </div>
+        
+        
+    </footer>
+
+
+        
+
+        
+
+        
+
+    </div>
+</main>
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+            
+        </div>
+        <script src="/js/meme.min.28a5d4816af314c49aa3cbde0f1fcf915fde38249ea2822037483dabeba1c680.js" integrity="sha256-KKXUgWrzFMSao8veDx/PkV/eOCSeooIgN0g9q+uhxoA=" data-no-instant></script>
+
+
+    <script data-no-instant>InstantClick.init();</script>
+
+
+    <script data-no-instant>
+        InstantClick.on('change', function () {
+            backToTop();
+        });
+    </script>
+
+
+
+    <script data-no-instant>
+        InstantClick.on('change', function () {
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === "dark") {
+                changeModeMeta("dark");
+                changeMode("🌙", "chroma", "chroma-dark");
+            } else if (userPrefers === "light") {
+                changeModeMeta("light");
+                changeMode("🌞", "chroma-dark", "chroma");
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta("dark");
+                changeMode("🌙", "chroma", "chroma-dark");
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta("light");
+                changeMode("🌞", "chroma-dark", "chroma");
+            }
+        });
+    </script>
+<script data-no-instant>
+            InstantClick.on('change', function () {
+                gtag('config', 'UA-88915657-1', {
+                    'page_path': location.pathname + location.search
+                });
+            });
+        </script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true
+    });
+</script>
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous" />
+<script>
+    if (typeof renderMathInElement === 'undefined') {
+        var getScript = (options) => {
+            var script = document.createElement('script');
+            script.defer = true;
+            script.crossOrigin = 'anonymous';
+            Object.keys(options).forEach((key) => {
+                script[key] = options[key];
+            });
+            document.body.appendChild(script);
+        };
+        getScript({
+            src: 'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js',
+            integrity: 'sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1',
+            onload: () => {
+                getScript({
+                    src: 'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/mhchem.min.js',
+                    integrity: 'sha384-oa0lfxCGjaU1LdYckhq8LZcP+JTf8cyJXe69O6VE6UrShzWveT6KiCElJrck/stm',
+                    onload: () => {
+                        getScript({
+                            src: 'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js',
+                            integrity: 'sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI',
+                            onload: () => {
+                                renderKaTex();
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    } else {
+        renderKaTex();
+    }
+    function renderKaTex() {
+        renderMathInElement(
+            document.body,
+            {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "\\[", right: "\\]", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false}
+                ]
+            }
+        );
+    }
+</script>
+
+
+
+    <script>
+    if (typeof MathJax === 'undefined') {
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mhchem']
+            },
+            
+                options: {
+                    renderActions: {
+                        addMenu: [0, '', '']
+                    }
+                },
+            
+            tex: {
+                inlineMath: {'[+]': [['$', '$']]},
+                tags: 'ams',
+                packages: {'[+]': ['mhchem']}
+            }
+        };
+        (function () {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+            script.defer = true;
+            document.head.appendChild(script);
+        })();
+    } else {
+        MathJax.texReset();
+        MathJax.typeset();
+    }
+</script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom('[data-zoomable]', {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+    
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+
+
+    </body>
+</html>
