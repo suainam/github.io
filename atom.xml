@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">msuai&#39;s blog</title>
     <subtitle type="html">学而不思则罔，思而不学则殆</subtitle>
-    <updated>2020-02-18T15:47:09+08:00</updated>
+    <updated>2020-02-18T19:07:05+08:00</updated>
     <id>https://msuai.top/</id>
     <link rel="alternate" type="text/html" href="https://msuai.top/" />
     <link rel="self" type="application/atom+xml" href="https://msuai.top/atom.xml" />
@@ -16,6 +16,59 @@
             </author>
     <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
     <generator uri="https://gohugo.io/" version="0.62.2">Hugo</generator>
+        <entry>
+            <title type="text">使用宝塔搭建网站</title>
+            <link rel="alternate" type="text/html" href="https://msuai.top/conig/built_site_with_bt/" />
+            <id>https://msuai.top/conig/built_site_with_bt/</id>
+            <updated>2020-02-18T18:51:42+08:00</updated>
+            <published>2020-02-18T16:39:18+08:00</published>
+            <author>
+                    <name>suainam</name>
+                    <uri>https://mausi.top/</uri>
+                    <email>suainam@gmail.com</email>
+                    </author>
+            <rights>保留文章链接及作者信息前提下，可转载和分享！</rights>
+    
+    <summary type="html"><![CDATA[记录使用宝塔搭建网站的历程]]></summary>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/bt/" term="BT" label="BT" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/vps/" term="vps" label="vps" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://msuai.top/tags/%E5%BB%BA%E7%BD%91/" term="建网" label="建网" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">解决Github DNS污染</title>
             <link rel="alternate" type="text/html" href="https://msuai.top/conig/solve_dns_about_github/" />
