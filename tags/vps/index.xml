@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>vps on DataLearning</title>
-    <link>https://111520.xyz/tags/vps/</link>
+    <link>https://suai.tk/tags/vps/</link>
     <description>Recent content in vps on DataLearning</description>
     <image>
-      <url>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Feb 2020 16:39:18 +0800</lastBuildDate><atom:link href="https://111520.xyz/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2020 16:39:18 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/vps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用宝塔搭建网站</title>
-      <link>https://111520.xyz/posts/built_site_with_bt/</link>
+      <link>https://suai.tk/posts/built_site_with_bt/</link>
       <pubDate>Tue, 18 Feb 2020 16:39:18 +0800</pubDate>
       
-      <guid>https://111520.xyz/posts/built_site_with_bt/</guid>
+      <guid>https://suai.tk/posts/built_site_with_bt/</guid>
       <description>记录使用宝塔搭建网站的历程</description>
     </item>
     
     <item>
       <title>加速算法_VPS</title>
-      <link>https://111520.xyz/posts/speeder_vps/</link>
+      <link>https://suai.tk/posts/speeder_vps/</link>
       <pubDate>Tue, 11 Feb 2020 15:44:55 +0800</pubDate>
       
-      <guid>https://111520.xyz/posts/speeder_vps/</guid>
+      <guid>https://suai.tk/posts/speeder_vps/</guid>
       <description>记录vps的加速</description>
     </item>
     
     <item>
       <title>通过密钥连接VPS</title>
-      <link>https://111520.xyz/posts/connect_vps_with_key/</link>
+      <link>https://suai.tk/posts/connect_vps_with_key/</link>
       <pubDate>Sun, 09 Feb 2020 01:15:30 +0800</pubDate>
       
-      <guid>https://111520.xyz/posts/connect_vps_with_key/</guid>
+      <guid>https://suai.tk/posts/connect_vps_with_key/</guid>
       <description>通过密钥来连接VPS，提升安全性</description>
     </item>
     
     <item>
       <title>RssHub Test</title>
-      <link>https://111520.xyz/posts/rsshub_build/</link>
+      <link>https://suai.tk/posts/rsshub_build/</link>
       <pubDate>Wed, 22 Jan 2020 13:58:48 +0800</pubDate>
       
-      <guid>https://111520.xyz/posts/rsshub_build/</guid>
+      <guid>https://suai.tk/posts/rsshub_build/</guid>
       <description>创建rsshub并实现订阅，实时查看</description>
     </item>
     

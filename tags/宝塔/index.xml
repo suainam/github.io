@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>宝塔 on DataLearning</title>
-    <link>https://111520.xyz/tags/%E5%AE%9D%E5%A1%94/</link>
+    <link>https://suai.tk/tags/%E5%AE%9D%E5%A1%94/</link>
     <description>Recent content in 宝塔 on DataLearning</description>
     <image>
-      <url>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Feb 2020 13:04:16 +0800</lastBuildDate><atom:link href="https://111520.xyz/tags/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Feb 2020 13:04:16 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>宝塔面板域名使用CloudFlare进行隐藏</title>
-      <link>https://111520.xyz/posts/btpanel_domain_proxy_with_cf/</link>
+      <link>https://suai.tk/posts/btpanel_domain_proxy_with_cf/</link>
       <pubDate>Mon, 10 Feb 2020 13:04:16 +0800</pubDate>
       
-      <guid>https://111520.xyz/posts/btpanel_domain_proxy_with_cf/</guid>
+      <guid>https://suai.tk/posts/btpanel_domain_proxy_with_cf/</guid>
       <description>使用CloudFlare进行宝塔面板域名的反代</description>
     </item>
     

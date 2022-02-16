@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>DNS on DataLearning</title>
-    <link>https://111520.xyz/tags/dns/</link>
+    <link>https://suai.tk/tags/dns/</link>
     <description>Recent content in DNS on DataLearning</description>
     <image>
-      <url>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 14 Feb 2020 18:07:32 +0800</lastBuildDate><atom:link href="https://111520.xyz/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2020 18:07:32 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决Github DNS污染</title>
-      <link>https://111520.xyz/posts/solve_dns_about_github/</link>
+      <link>https://suai.tk/posts/solve_dns_about_github/</link>
       <pubDate>Fri, 14 Feb 2020 18:07:32 +0800</pubDate>
       
-      <guid>https://111520.xyz/posts/solve_dns_about_github/</guid>
+      <guid>https://suai.tk/posts/solve_dns_about_github/</guid>
       <description>通过修改hosts来解决github访问缓慢、下载缓慢问题</description>
     </item>
     

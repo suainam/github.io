@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://111520.xyz/sitemap.xml
+Sitemap: https://suai.tk/sitemap.xml

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>同步 on DataLearning</title>
-    <link>https://111520.xyz/tags/%E5%90%8C%E6%AD%A5/</link>
+    <link>https://suai.tk/tags/%E5%90%8C%E6%AD%A5/</link>
     <description>Recent content in 同步 on DataLearning</description>
     <image>
-      <url>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Jan 2020 22:00:55 +0800</lastBuildDate><atom:link href="https://111520.xyz/tags/%E5%90%8C%E6%AD%A5/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jan 2020 22:00:55 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/%E5%90%8C%E6%AD%A5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TEST</title>
-      <link>https://111520.xyz/posts/test_differt_add/</link>
+      <link>https://suai.tk/posts/test_differt_add/</link>
       <pubDate>Sat, 18 Jan 2020 22:00:55 +0800</pubDate>
       
-      <guid>https://111520.xyz/posts/test_differt_add/</guid>
+      <guid>https://suai.tk/posts/test_differt_add/</guid>
       <description>尝试进行异地同步和部署</description>
     </item>
     
