@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DataLearning</title>
+    <link>https://111520.xyz/</link>
+    <description>Recent content on DataLearning</description>
+    <image>
+      <url>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://111520.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 18 Feb 2020 16:39:18 +0800</lastBuildDate><atom:link href="https://111520.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用宝塔搭建网站</title>
+      <link>https://111520.xyz/posts/built_site_with_bt/</link>
+      <pubDate>Tue, 18 Feb 2020 16:39:18 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/built_site_with_bt/</guid>
+      <description>记录使用宝塔搭建网站的历程</description>
+    </item>
+    
+    <item>
+      <title>解决Github DNS污染</title>
+      <link>https://111520.xyz/posts/solve_dns_about_github/</link>
+      <pubDate>Fri, 14 Feb 2020 18:07:32 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/solve_dns_about_github/</guid>
+      <description>通过修改hosts来解决github访问缓慢、下载缓慢问题</description>
+    </item>
+    
+    <item>
+      <title>加速算法_VPS</title>
+      <link>https://111520.xyz/posts/speeder_vps/</link>
+      <pubDate>Tue, 11 Feb 2020 15:44:55 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/speeder_vps/</guid>
+      <description>记录vps的加速</description>
+    </item>
+    
+    <item>
+      <title>宝塔面板域名使用CloudFlare进行隐藏</title>
+      <link>https://111520.xyz/posts/btpanel_domain_proxy_with_cf/</link>
+      <pubDate>Mon, 10 Feb 2020 13:04:16 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/btpanel_domain_proxy_with_cf/</guid>
+      <description>使用CloudFlare进行宝塔面板域名的反代</description>
+    </item>
+    
+    <item>
+      <title>通过密钥连接VPS</title>
+      <link>https://111520.xyz/posts/connect_vps_with_key/</link>
+      <pubDate>Sun, 09 Feb 2020 01:15:30 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/connect_vps_with_key/</guid>
+      <description>通过密钥来连接VPS，提升安全性</description>
+    </item>
+    
+    <item>
+      <title>每日SQL三分钟_002</title>
+      <link>https://111520.xyz/posts/sql3m_002/</link>
+      <pubDate>Wed, 22 Jan 2020 15:27:00 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/sql3m_002/</guid>
+      <description>记录SQL学习和使用过程中疑难重点</description>
+    </item>
+    
+    <item>
+      <title>RssHub Test</title>
+      <link>https://111520.xyz/posts/rsshub_build/</link>
+      <pubDate>Wed, 22 Jan 2020 13:58:48 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/rsshub_build/</guid>
+      <description>创建rsshub并实现订阅，实时查看</description>
+    </item>
+    
+    <item>
+      <title>建站历程</title>
+      <link>https://111520.xyz/posts/bulit_site_hist/</link>
+      <pubDate>Wed, 22 Jan 2020 11:47:04 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/bulit_site_hist/</guid>
+      <description>SSH连接、网站搭建发布、学习过程中碰到的问题收集</description>
+    </item>
+    
+    <item>
+      <title>配置清单 Windows软件</title>
+      <link>https://111520.xyz/posts/windows_program_config/</link>
+      <pubDate>Tue, 21 Jan 2020 15:14:59 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/windows_program_config/</guid>
+      <description>记录电脑软件的搭配情况，确保高效、安全</description>
+    </item>
+    
+    <item>
+      <title>TEST</title>
+      <link>https://111520.xyz/posts/test_differt_add/</link>
+      <pubDate>Sat, 18 Jan 2020 22:00:55 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/test_differt_add/</guid>
+      <description>尝试进行异地同步和部署</description>
+    </item>
+    
+    <item>
+      <title>每日SQL三分钟_001</title>
+      <link>https://111520.xyz/posts/sql3m_001/</link>
+      <pubDate>Fri, 17 Jan 2020 10:51:42 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/sql3m_001/</guid>
+      <description>记录SQL学习和使用过程中疑难重点</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://111520.xyz/posts/hello_world/</link>
+      <pubDate>Tue, 14 Jan 2020 09:48:23 +0800</pubDate>
+      
+      <guid>https://111520.xyz/posts/hello_world/</guid>
+      <description>记录本博客基本的搭建发布过程</description>
+    </item>
+    
+    
+    
+  </channel>
+</rss>
