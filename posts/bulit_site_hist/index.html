@@ -36,7 +36,7 @@
 <meta name=twitter:title content="建站历程">
 <meta name=twitter:description content="SSH连接、网站搭建发布、学习过程中碰到的问题收集">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://suai.tk/posts/"},{"@type":"ListItem","position":2,"name":"建站历程","item":"https://suai.tk/posts/bulit_site_hist/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"建站历程","name":"建站历程","description":"SSH连接、网站搭建发布、学习过程中碰到的问题收集","keywords":["问题","question","answer","解答"],"articleBody":"在主机(VPS)搭建网站 默认按照 Debian 进行, 默认为 root 权限，如果其他用户，在前面添加sudo\n建站前配置 Q1: ssh 连接提示：\nConnecting to xx.xx.xx.xx:xx... Connection established. To escape to local shell, press 'Ctrl+Alt+]'. Connection closing...Socket close. Connection closed by foreign host. Disconnected from remote host(pr) at 11:38:50. A1: 可能是 SSH 服务器没设置保活时间间隔1，设置属性解释2\necho \" ClientAliveInterval 60 ClientAliveCountMax 3 \"  /etc/ssh/sshd_config \u0026\u0026 systemctl restart sshd 如果需要安装宝塔，需要在此处开始!!!\n如果需要安装宝塔，需要在此处开始!!!\n如果需要安装宝塔，需要在此处开始!!!\n参考宝塔 Linux 面板安装教程\nQ2: 进行系统的更新升级及必要程序的安装（vim/curl/wget/screen), 对 vim 设置行号、大小写查询转换、tab 宽度等3\nA2: 执行以下的脚本\napt-get update -y \u0026\u0026 apt-get upgrade -y \u0026\u0026 apt-get install -y vim wget screen curl \u0026\u0026 echo \"syntax on set smartcase set number set shiftwidth=4 set tabstop=4 set expandtab \"  /etc/vim/vimrc \u0026\u0026 tail /etc/vim/vimrc Q3: 修改 python 的默认软链接\nA3:\nln -sf /usr/bin/python3 /usr/bin/python \u0026\u0026 python --version # apt-get install python3-pip \u0026\u0026 pip3 --version Q4: install v2ray\nA4: 233script，这个可以后面另开叙述，此处仅供备用\nbash (curl -s -L https://git.io/v2ray.sh) 搭建网站 选择 LNMP 或者 Caddy 均可，500M 以上内存建议 LNMP， 仅供参考\nLNMP 参考lnmp.org的安装教程，在此只提供必要的说明。 在lnmp.org.auto按照自己 vps 的情况，内存分配器可以选jemalloc，生成一键脚本, 进行安装\n 创建虚拟机，并添加泛域名解析。  lnmp vhost add # xxx.site # *.xxx.site #删除虚拟机， # lnmp vhost del # chattr -i /home/wwwroot/msuai.top/.user.ini # rm -rf /home/wwwroot/msuai.top cf 进行泛域名解析  cloudflare 进行域名的绑定和解析，然后 ssl 里面先选程 flexible 模式，获得 CF_key, CF_pem\nexport CF_Key=\"xxxxxx\" export CF_Email=\"xxxxxx\" lnmp dnsssl cf 此处使用 globe key, 可以安装成功。 如果要将 flexible 改成 full 或者 full(strict)，需要更多的配置，暂时没有测试完毕，可参考文档4\n修改 nginx.conf 里面的配置，添加一下include内容， 并测试重启 nginx 服务5, 访问域名，不再显示nginx welcome 但也不是 ip 探针、phpmyadmin 等内容  include vhost/*.conf # 测试nginx， 并重启 nginx -t /etc/init.d/nginx reload 配置多站点, 安装虚拟机，进行解析和网站目录的设置  Caddy+php 参考小内存 VPS 安装 Caddy+PHP 7+Sqlite 3 环境，并快速搭建 Typecho 博客，可以成功安装\n只能先使用 flexible 模式。 如果使用了 cloudflare 的严格模式，一直出现 521 错误，即使加了插件和 tls，也出错，目前没有找到更好的解决办法，需要后续再来解决4\napt-get install php7.0-cgi php7.0-fpm php7.0-curl php7.0-gd php7.0-mbstring php7.0-xml php7.0-sqlite3 sqlite3 -y # install caddy with doubi wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh \u0026\u0026 chmod +x caddy_install.sh \u0026\u0026 bash caddy_install.sh install # tls.dns.cloudflare # 编辑Caddyfile echo \"http://xxx.site { redir https://www.xxx.site{url} } https://www.xxx.site { gzip root /yoursite_pwd # tls { # dns cloudflare # } fastcgi / /run/php/php7.0-fpm.sock php rewrite { if {path} not_match ^\\/admin to {path} {path}/ /index.php?{query} } }\"  /usr/local/caddy/Caddyfile # 重启caddy /etc/init.d/caddy restart 安装 webserver 默认网站目录为 $YWS, 执行完 shell 脚本，打开域名即可安装\n  安装文件\n 安装 WordPress, 比如 $YWS = wp.xxx.site  # 如果需要重装，只需要删除里面的`wp-config.php`即可[，相关的数据库进行清理] cd $YWS wget https://cn.wordpress.org/latest-zh_CN.tar.gz \u0026\u0026 tar zxvf latest* \u0026\u0026 mv ./wordpress/* ./ \u0026\u0026 rm -rf latest* wordpress/ \u0026\u0026 chmod -R 755 ./ \u0026\u0026 chown www:www -R ./*  安装 Typecho, 比如 $YWS = tp.xxx.site  cd $YWS #以下为最新稳定版 wget http://typecho.org/downloads/1.1-17.10.30-release.tar.gz \u0026\u0026 tar zxvf 1.1* \u0026\u0026 mv ./build/* ./ \u0026\u0026 rm -rf 1.1* buil* \u0026\u0026 chmod -R 755 ./* \u0026\u0026 chown www:www -R ./*  安装 Zblog, 比如 $YWS = zg.xxx.site  cd $YWS wget https://update.zblogcn.com/zblogphp/install.tar.gz \u0026\u0026 tar -xf ./install.tar.gz \u0026\u0026 rm -rf ./install.tar.gz \u0026\u0026 chmod -R 755 ./* \u0026\u0026 chown www:www -R ./*   FAQ\nQ1: 在设置中开启了站点的https，出现重定向循环\nA1: 修改 wordpress 根目录($YWS)的 wp-config.php，在 $_SERVER['HTTPS'] = 'on'; define('FORCE_SSL_LOGIN', true); define('FORCE_SSL_ADMIN', true); Q2: 找到适配 typecho\u0026wordpress 的主题\nA2：\n  typecho 主题参考\nPureLove 小清新风格 - Typecho 主题模板站\nBigfa 简约但精致的主题 - Typecho 主题模板站\nArmxMod for Typecho - Typecho 个性化响应式自适应主题\nAL_lolimeow 主题 for Typecho 版-盒子萌\nAurora\n  wordpress 主题参考\nSakura\nSakura2，该主题不可用\nH-Siren\nLolimeow\nRabbit3.0\n    使用 Github 和 Netlify 搭建静态网页 分别使用仓库对 githubpages 和 Netlify 搭建，域名使用 Cloudflare进行设置解析，遇到以下问题：\n q1: 网页没有格式，css 无法进行网页的生成。F12 查看网页 css 代码发现：  Failed to find a valid digest in the 'integrity' attribute for resource 'https://xxxxx.ga/css/xx.css' \u0026\u0026 with computed SHA-256 integrity 'Df4VYwE3+jo4Q='. The resource has been blocked.   a1: 解决方法： 关闭 Cloudflare 的 css/js/html 数据压缩\n  q2: Netlify中使用 hugo 进行静态网页制作，其中对 theme 进行git submodule add订阅，异地进行数据更新维护时，发现本地无法进行预览，缺少模板文件（template、html 等等，提示需要进行模板文件的创建）\n  a2: 本地的 clone 的主题文件夹为空，需要清理后，重新订阅主题，才能正确进行预览\n  Docker 安装网站等一系列 # install docker # 参考  apt-get remove docker docker-engine docker.io curl -fsSL get.docker.com -o get-docker.sh \u0026\u0026 sh get-docker.sh pip install docker-compose mkdir -p ./composet_demo/docker echo \" version: '3' services: caddy: image: abiosoft/caddy ports: - \"80:80\" - \"443:443\" volumes: - ./path/to/your/Caddyfile:/etc/Caddyfile - /path/to/certificate/.caddy:/root/.caddy - /your/site/root:/srv restart: always environment: - CLOUDFLARE_EMAIL=your_email_here - CLOUDFLARE_API_KEY=your_api_key - ACME_AGREE=true - TZ=Asia/Shanghai networks: - frontend db: image: mysql:5.7 volumes: - ./path/to/database:/var/lib/mysql restart: always expose: - \"3306\" environment: - MYSQL_ROOT_PASSWORD=password - MYSQL_DATABASE=typecho - MYSQL_USER=typecho - MYSQL_PASSWORD=password - TZ=Asia/Shanghai networks: - frontend php: image: php:fpm volumes: - /your/site/root:/var/www/html restart: always expose: - \"9000\" environment: - TZ=Asia/Shanghai depends_on: - db - caddy networks: - frontend networks: frontend: \"  ./composet_demo/docker/docker-compose.yml 插件推荐 Typecho 主要进行主题和插件的收藏，备用\n主题  Inital 主题，参考分享 下的文章 - OFFODD pass  插件  缓存插件，缓存插件 TpCache for Typecho - 老高的技术博客 Sitemap, Typecho 站点地图快速生成插件 Sitemap - TYPECHO WIKI  未完待续\n  解决 SSH Connection closed by foreign host 问题 ↩︎\n What options `ServerAliveInterval` and `ClientAliveInterval` in sshd_config exactly do? ↩︎\n REDEFINE-TAB-AS-4-SPACES ↩︎\n CloudFlare 证书配置 ↩︎\n NGINX-ONLY-SHOWS-WELCOME-PAGE ↩︎\n  ","wordCount":"688","inLanguage":"en","datePublished":"2020-01-22T11:47:04+08:00","dateModified":"2020-01-22T11:47:04+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/bulit_site_hist/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"建站历程","name":"建站历程","description":"SSH连接、网站搭建发布、学习过程中碰到的问题收集","keywords":["问题","question","answer","解答"],"articleBody":"在主机(VPS)搭建网站 默认按照 Debian 进行, 默认为 root 权限，如果其他用户，在前面添加sudo\n建站前配置 Q1: ssh 连接提示：\nConnecting to xx.xx.xx.xx:xx... Connection established. To escape to local shell, press 'Ctrl+Alt+]'. Connection closing...Socket close. Connection closed by foreign host. Disconnected from remote host(pr) at 11:38:50. A1: 可能是 SSH 服务器没设置保活时间间隔1，设置属性解释2\necho \" ClientAliveInterval 60 ClientAliveCountMax 3 \"  /etc/ssh/sshd_config \u0026\u0026 systemctl restart sshd 如果需要安装宝塔，需要在此处开始!!!\n如果需要安装宝塔，需要在此处开始!!!\n如果需要安装宝塔，需要在此处开始!!!\n参考宝塔 Linux 面板安装教程\nQ2: 进行系统的更新升级及必要程序的安装（vim/curl/wget/screen), 对 vim 设置行号、大小写查询转换、tab 宽度等3\nA2: 执行以下的脚本\napt-get update -y \u0026\u0026 apt-get upgrade -y \u0026\u0026 apt-get install -y vim wget screen curl \u0026\u0026 echo \"syntax on set smartcase set number set shiftwidth=4 set tabstop=4 set expandtab \"  /etc/vim/vimrc \u0026\u0026 tail /etc/vim/vimrc Q3: 修改 python 的默认软链接\nA3:\nln -sf /usr/bin/python3 /usr/bin/python \u0026\u0026 python --version # apt-get install python3-pip \u0026\u0026 pip3 --version Q4: install v2ray\nA4: 233script，这个可以后面另开叙述，此处仅供备用\nbash (curl -s -L https://git.io/v2ray.sh) 搭建网站 选择 LNMP 或者 Caddy 均可，500M 以上内存建议 LNMP， 仅供参考\nLNMP 参考lnmp.org的安装教程，在此只提供必要的说明。 在lnmp.org.auto按照自己 vps 的情况，内存分配器可以选jemalloc，生成一键脚本, 进行安装\n 创建虚拟机，并添加泛域名解析。  lnmp vhost add # xxx.site # *.xxx.site #删除虚拟机， # lnmp vhost del # chattr -i /home/wwwroot/msuai.top/.user.ini # rm -rf /home/wwwroot/msuai.top cf 进行泛域名解析  cloudflare 进行域名的绑定和解析，然后 ssl 里面先选程 flexible 模式，获得 CF_key, CF_pem\nexport CF_Key=\"xxxxxx\" export CF_Email=\"xxxxxx\" lnmp dnsssl cf 此处使用 globe key, 可以安装成功。 如果要将 flexible 改成 full 或者 full(strict)，需要更多的配置，暂时没有测试完毕，可参考文档4\n修改 nginx.conf 里面的配置，添加一下include内容， 并测试重启 nginx 服务5, 访问域名，不再显示nginx welcome 但也不是 ip 探针、phpmyadmin 等内容  include vhost/*.conf # 测试nginx， 并重启 nginx -t /etc/init.d/nginx reload 配置多站点, 安装虚拟机，进行解析和网站目录的设置  Caddy+php 参考小内存 VPS 安装 Caddy+PHP 7+Sqlite 3 环境，并快速搭建 Typecho 博客，可以成功安装\n只能先使用 flexible 模式。 如果使用了 cloudflare 的严格模式，一直出现 521 错误，即使加了插件和 tls，也出错，目前没有找到更好的解决办法，需要后续再来解决4\napt-get install php7.0-cgi php7.0-fpm php7.0-curl php7.0-gd php7.0-mbstring php7.0-xml php7.0-sqlite3 sqlite3 -y # install caddy with doubi wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh \u0026\u0026 chmod +x caddy_install.sh \u0026\u0026 bash caddy_install.sh install # tls.dns.cloudflare # 编辑Caddyfile echo \"http://xxx.site { redir https://www.xxx.site{url} } https://www.xxx.site { gzip root /yoursite_pwd # tls { # dns cloudflare # } fastcgi / /run/php/php7.0-fpm.sock php rewrite { if {path} not_match ^\\/admin to {path} {path}/ /index.php?{query} } }\"  /usr/local/caddy/Caddyfile # 重启caddy /etc/init.d/caddy restart 安装 webserver 默认网站目录为 $YWS, 执行完 shell 脚本，打开域名即可安装\n  安装文件\n 安装 WordPress, 比如 $YWS = wp.xxx.site  # 如果需要重装，只需要删除里面的`wp-config.php`即可[，相关的数据库进行清理] cd $YWS wget https://cn.wordpress.org/latest-zh_CN.tar.gz \u0026\u0026 tar zxvf latest* \u0026\u0026 mv ./wordpress/* ./ \u0026\u0026 rm -rf latest* wordpress/ \u0026\u0026 chmod -R 755 ./ \u0026\u0026 chown www:www -R ./*  安装 Typecho, 比如 $YWS = tp.xxx.site  cd $YWS #以下为最新稳定版 wget http://typecho.org/downloads/1.1-17.10.30-release.tar.gz \u0026\u0026 tar zxvf 1.1* \u0026\u0026 mv ./build/* ./ \u0026\u0026 rm -rf 1.1* buil* \u0026\u0026 chmod -R 755 ./* \u0026\u0026 chown www:www -R ./*  安装 Zblog, 比如 $YWS = zg.xxx.site  cd $YWS wget https://update.zblogcn.com/zblogphp/install.tar.gz \u0026\u0026 tar -xf ./install.tar.gz \u0026\u0026 rm -rf ./install.tar.gz \u0026\u0026 chmod -R 755 ./* \u0026\u0026 chown www:www -R ./*   FAQ\nQ1: 在设置中开启了站点的https，出现重定向循环\nA1: 修改 wordpress 根目录($YWS)的 wp-config.php，在 $_SERVER['HTTPS'] = 'on'; define('FORCE_SSL_LOGIN', true); define('FORCE_SSL_ADMIN', true); Q2: 找到适配 typecho\u0026wordpress 的主题\nA2：\n  typecho 主题参考\nPureLove 小清新风格 - Typecho 主题模板站\nBigfa 简约但精致的主题 - Typecho 主题模板站\nArmxMod for Typecho - Typecho 个性化响应式自适应主题\nAL_lolimeow 主题 for Typecho 版-盒子萌\nAurora\n  wordpress 主题参考\nSakura\nSakura2，该主题不可用\nH-Siren\nLolimeow\nRabbit3.0\n    使用 Github 和 Netlify 搭建静态网页 分别使用仓库对 githubpages 和 Netlify 搭建，域名使用 Cloudflare进行设置解析，遇到以下问题：\n q1: 网页没有格式，css 无法进行网页的生成。F12 查看网页 css 代码发现：  Failed to find a valid digest in the 'integrity' attribute for resource 'https://xxxxx.ga/css/xx.css' \u0026\u0026 with computed SHA-256 integrity 'Df4VYwE3+jo4Q='. The resource has been blocked.   a1: 解决方法： 关闭 Cloudflare 的 css/js/html 数据压缩\n  q2: Netlify中使用 hugo 进行静态网页制作，其中对 theme 进行git submodule add订阅，异地进行数据更新维护时，发现本地无法进行预览，缺少模板文件（template、html 等等，提示需要进行模板文件的创建）\n  a2: 本地的 clone 的主题文件夹为空，需要清理后，重新订阅主题，才能正确进行预览\n  Docker 安装网站 # install docker # 参考  apt-get remove docker docker-engine docker.io curl -fsSL get.docker.com -o get-docker.sh \u0026\u0026 sh get-docker.sh pip install docker-compose mkdir /root/typecho cd /root/typecho docker run -d \\ --name=typecho \\ --restart always \\ --mount type=tmpfs,destination=/tmp \\ -v /root/typecho/data:/data \\ -e PHP_TZ=Asia/Shanghai \\ -e PHP_MAX_EXECUTION_TIME=600 \\ -p 40080:80 \\ 80x86/typecho:latest 插件推荐 Typecho 主要进行主题和插件的收藏，备用\n主题  Inital 主题，参考分享 下的文章 - OFFODD Joe主题, HaoOuBa/Joe: A Theme of Typecho  插件  缓存插件，缓存插件 TpCache for Typecho - 老高的技术博客 Sitemap, Typecho 站点地图快速生成插件 Sitemap - TYPECHO WIKI  未完待续\n  解决 SSH Connection closed by foreign host 问题 ↩︎\n What options `ServerAliveInterval` and `ClientAliveInterval` in sshd_config exactly do? ↩︎\n REDEFINE-TAB-AS-4-SPACES ↩︎\n CloudFlare 证书配置 ↩︎\n NGINX-ONLY-SHOWS-WELCOME-PAGE ↩︎\n  ","wordCount":"633","inLanguage":"en","datePublished":"2020-01-22T11:47:04+08:00","dateModified":"2020-01-22T11:47:04+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/bulit_site_hist/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -89,7 +89,7 @@
 <div class=post-description>
 SSH连接、网站搭建发布、学习过程中碰到的问题收集
 </div>
-<div class=post-meta><span title="2020-01-22 11:47:04 +0800 +0800">Wed Jan 22 2020</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Suai&nbsp;|&nbsp;<a href="mailto://suai_tk@msuai.top?subject=Suggesting%20changes%20for%20/posts/%e5%bb%ba%e7%ab%99%e6%8e%a2%e7%b4%a2.md" rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+<div class=post-meta><span title="2020-01-22 11:47:04 +0800 +0800">Wed Jan 22 2020</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Suai&nbsp;|&nbsp;<a href="mailto://suai_tk@msuai.top?subject=Suggesting%20changes%20for%20/posts/%e5%bb%ba%e7%ab%99%e6%8e%a2%e7%b4%a2.md" rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header> <div class=toc>
 <details open>
@@ -114,7 +114,7 @@ SSH连接、网站搭建发布、学习过程中碰到的问题收集
 <li>
 <a href=#%e4%bd%bf%e7%94%a8-github-%e5%92%8c-netlify-%e6%90%ad%e5%bb%ba%e9%9d%99%e6%80%81%e7%bd%91%e9%a1%b5 aria-label="使用 Github 和 Netlify 搭建静态网页">使用 Github 和 Netlify 搭建静态网页</a></li>
 <li>
-<a href=#docker-%e5%ae%89%e8%a3%85%e7%bd%91%e7%ab%99%e7%ad%89%e4%b8%80%e7%b3%bb%e5%88%97 aria-label="Docker 安装网站等一系列">Docker 安装网站等一系列</a></li>
+<a href=#docker-%e5%ae%89%e8%a3%85%e7%bd%91%e7%ab%99 aria-label="Docker 安装网站">Docker 安装网站</a></li>
 <li>
 <a href=#%e6%8f%92%e4%bb%b6%e6%8e%a8%e8%8d%90 aria-label=插件推荐>插件推荐</a><ul>
 <li>
@@ -308,78 +308,32 @@ define<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;FORCE_SSL
 <p>a2: 本地的 clone 的主题文件夹为空，需要清理后，重新订阅主题，才能正确进行预览</p>
 </li>
 </ul>
-<h2 id=docker-安装网站等一系列>Docker 安装网站等一系列<a hidden class=anchor aria-hidden=true href=#docker-安装网站等一系列>#</a></h2>
+<h2 id=docker-安装网站>Docker 安装网站<a hidden class=anchor aria-hidden=true href=#docker-安装网站>#</a></h2>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># install docker</span>
 <span style=color:#75715e># 参考 &lt;https://zhuanlan.zhihu.com/p/93839317&gt;</span>
 apt-get remove docker docker-engine docker.io
 curl -fsSL get.docker.com -o get-docker.sh <span style=color:#f92672>&amp;&amp;</span> sh get-docker.sh
 pip install docker-compose
 
-mkdir -p ./composet_demo/docker
+mkdir /root/typecho
+cd /root/typecho
 
-echo <span style=color:#e6db74>&#34;
-</span><span style=color:#e6db74>version: &#39;3&#39;
-</span><span style=color:#e6db74>
-</span><span style=color:#e6db74>services:
-</span><span style=color:#e6db74>    caddy:
-</span><span style=color:#e6db74>        image: abiosoft/caddy
-</span><span style=color:#e6db74>        ports:
-</span><span style=color:#e6db74>            - &#34;</span>80:80<span style=color:#e6db74>&#34;
-</span><span style=color:#e6db74>            - &#34;</span>443:443<span style=color:#e6db74>&#34;
-</span><span style=color:#e6db74>        volumes:
-</span><span style=color:#e6db74>            - ./path/to/your/Caddyfile:/etc/Caddyfile
-</span><span style=color:#e6db74>            - /path/to/certificate/.caddy:/root/.caddy
-</span><span style=color:#e6db74>            - /your/site/root:/srv
-</span><span style=color:#e6db74>        restart: always
-</span><span style=color:#e6db74>        environment:
-</span><span style=color:#e6db74>            - CLOUDFLARE_EMAIL=your_email_here
-</span><span style=color:#e6db74>            - CLOUDFLARE_API_KEY=your_api_key
-</span><span style=color:#e6db74>            - ACME_AGREE=true
-</span><span style=color:#e6db74>            - TZ=Asia/Shanghai
-</span><span style=color:#e6db74>        networks:
-</span><span style=color:#e6db74>            - frontend
-</span><span style=color:#e6db74>
-</span><span style=color:#e6db74>    db:
-</span><span style=color:#e6db74>        image: mysql:5.7
-</span><span style=color:#e6db74>        volumes:
-</span><span style=color:#e6db74>            - ./path/to/database:/var/lib/mysql
-</span><span style=color:#e6db74>        restart: always
-</span><span style=color:#e6db74>        expose:
-</span><span style=color:#e6db74>            - &#34;</span>3306<span style=color:#e6db74>&#34;
-</span><span style=color:#e6db74>        environment:
-</span><span style=color:#e6db74>            - MYSQL_ROOT_PASSWORD=password
-</span><span style=color:#e6db74>            - MYSQL_DATABASE=typecho
-</span><span style=color:#e6db74>            - MYSQL_USER=typecho
-</span><span style=color:#e6db74>            - MYSQL_PASSWORD=password
-</span><span style=color:#e6db74>            - TZ=Asia/Shanghai
-</span><span style=color:#e6db74>        networks:
-</span><span style=color:#e6db74>            - frontend
-</span><span style=color:#e6db74>
-</span><span style=color:#e6db74>    php:
-</span><span style=color:#e6db74>        image: php:fpm
-</span><span style=color:#e6db74>        volumes:
-</span><span style=color:#e6db74>            - /your/site/root:/var/www/html
-</span><span style=color:#e6db74>        restart: always
-</span><span style=color:#e6db74>        expose:
-</span><span style=color:#e6db74>            - &#34;</span>9000<span style=color:#e6db74>&#34;
-</span><span style=color:#e6db74>        environment:
-</span><span style=color:#e6db74>            - TZ=Asia/Shanghai
-</span><span style=color:#e6db74>        depends_on:
-</span><span style=color:#e6db74>            - db
-</span><span style=color:#e6db74>            - caddy
-</span><span style=color:#e6db74>        networks:
-</span><span style=color:#e6db74>            - frontend
-</span><span style=color:#e6db74>
-</span><span style=color:#e6db74>networks:
-</span><span style=color:#e6db74>    frontend:
-</span><span style=color:#e6db74>&#34;</span> &gt; ./composet_demo/docker/docker-compose.yml
+docker run -d <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>--name<span style=color:#f92672>=</span>typecho <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>--restart always <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>--mount type<span style=color:#f92672>=</span>tmpfs,destination<span style=color:#f92672>=</span>/tmp <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>-v /root/typecho/data:/data <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>-e PHP_TZ<span style=color:#f92672>=</span>Asia/Shanghai <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>-e PHP_MAX_EXECUTION_TIME<span style=color:#f92672>=</span><span style=color:#ae81ff>600</span> <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>-p 40080:80 <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>80x86/typecho:latest
 </code></pre></div><h2 id=插件推荐>插件推荐<a hidden class=anchor aria-hidden=true href=#插件推荐>#</a></h2>
 <h3 id=typecho>Typecho<a hidden class=anchor aria-hidden=true href=#typecho>#</a></h3>
 <p>主要进行主题和插件的收藏，备用</p>
 <h4 id=主题>主题<a hidden class=anchor aria-hidden=true href=#主题>#</a></h4>
 <ol>
 <li>Inital 主题，参考<a href=https://www.offodd.com/share/>分享 下的文章 - OFFODD</a></li>
-<li>pass</li>
+<li>Joe主题, <a href=https://github.com/HaoOuBa/Joe>HaoOuBa/Joe: A Theme of Typecho</a></li>
 </ol>
 <h4 id=插件>插件<a hidden class=anchor aria-hidden=true href=#插件>#</a></h4>
 <ol>

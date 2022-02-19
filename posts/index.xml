@@ -9,7 +9,16 @@
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Feb 2020 16:39:18 +0800</lastBuildDate><atom:link href="https://suai.tk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Feb 2022 10:55:55 +0800</lastBuildDate><atom:link href="https://suai.tk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>惠普打印机问题解决</title>
+      <link>https://suai.tk/posts/questions_about_hp_printer/</link>
+      <pubDate>Sat, 19 Feb 2022 10:55:55 +0800</pubDate>
+      
+      <guid>https://suai.tk/posts/questions_about_hp_printer/</guid>
+      <description>解决惠普打印机不打印、不自动清空队列的问题</description>
+    </item>
+    
     <item>
       <title>使用宝塔搭建网站</title>
       <link>https://suai.tk/posts/built_site_with_bt/</link>

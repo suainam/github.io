@@ -36,7 +36,7 @@
 <meta name=twitter:title content="使用宝塔搭建网站">
 <meta name=twitter:description content="记录使用宝塔搭建网站的历程">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://suai.tk/posts/"},{"@type":"ListItem","position":2,"name":"使用宝塔搭建网站","item":"https://suai.tk/posts/built_site_with_bt/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"使用宝塔搭建网站","name":"使用宝塔搭建网站","description":"记录使用宝塔搭建网站的历程","keywords":["BT","vps","建网"],"articleBody":"vps 前期准备  安装基本的软件、更新和配置，详见建站探索 修改 python 默认的版本，详见建站探索 修改为密钥连接，详见使用密钥连接 VPS  安装和卸载宝塔面板  安装面板，如果后续出现问题需要卸载，可以使用卸载的命令(2 选项不会清空网站和数据空，需要卸载面板前操作删除)  # install wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh \u0026\u0026 bash install.sh -y # uninstall wget http://download.bt.cn/install/bt-uninstall.sh \u0026\u0026 sh bt-uninstall.sh 安装必要的运行环境","wordCount":"29","inLanguage":"en","datePublished":"2020-02-18T16:39:18+08:00","dateModified":"2020-02-18T16:39:18+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/built_site_with_bt/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"使用宝塔搭建网站","name":"使用宝塔搭建网站","description":"记录使用宝塔搭建网站的历程","keywords":["BT","vps","建网"],"articleBody":"vps 前期准备  安装基本的软件、更新和配置，详见建站探索 修改 python 默认的版本，详见建站探索 修改为密钥连接，详见使用密钥连接 VPS  安装和卸载宝塔面板  安装面板，如果后续出现问题需要卸载，可以使用卸载的命令(2 选项不会清空网站和数据空，需要卸载面板前操作删除)  # install wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh \u0026\u0026 bash install.sh -y # uninstall wget http://download.bt.cn/install/bt-uninstall.sh \u0026\u0026 sh bt-uninstall.sh 安装必要的运行环境  lnmp 网站安装 定期备份支持 进行网站正向或反向代理 ","wordCount":"33","inLanguage":"en","datePublished":"2020-02-18T16:39:18+08:00","dateModified":"2020-02-18T16:39:18+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/built_site_with_bt/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -124,6 +124,12 @@ wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh <span sty
 <span style=color:#75715e># uninstall</span>
 wget http://download.bt.cn/install/bt-uninstall.sh <span style=color:#f92672>&amp;&amp;</span> sh bt-uninstall.sh
 </code></pre></div><h2 id=安装必要的运行环境>安装必要的运行环境<a hidden class=anchor aria-hidden=true href=#安装必要的运行环境>#</a></h2>
+<ol>
+<li>lnmp</li>
+<li>网站安装</li>
+<li>定期备份支持</li>
+<li>进行网站正向或反向代理</li>
+</ol>
 </div>
 <footer class=post-footer>
 <ul class=post-tags>
@@ -132,6 +138,11 @@ wget http://download.bt.cn/install/bt-uninstall.sh <span style=color:#f92672>&am
 <li><a href=https://suai.tk/tags/%E5%BB%BA%E7%BD%91/>建网</a></li>
 </ul>
 <nav class=paginav>
+<a class=prev href=https://suai.tk/posts/questions_about_hp_printer/>
+<span class=title>« Prev Page</span>
+<br>
+<span>惠普打印机问题解决</span>
+</a>
 <a class=next href=https://suai.tk/posts/solve_dns_about_github/>
 <span class=title>Next Page »</span>
 <br>

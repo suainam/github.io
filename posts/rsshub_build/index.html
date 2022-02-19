@@ -36,7 +36,7 @@
 <meta name=twitter:title content="RssHub Test">
 <meta name=twitter:description content="创建rsshub并实现订阅，实时查看">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://suai.tk/posts/"},{"@type":"ListItem","position":2,"name":"RssHub Test","item":"https://suai.tk/posts/rsshub_build/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"RssHub Test","name":"RssHub Test","description":"创建rsshub并实现订阅，实时查看","keywords":["rsshub","bulid","vps"],"articleBody":"创建环境 主要参考官网文档1和 RssHub2文档\nsudo curl -L \"https://github.com/docker/compose/releases/download/1.25.1/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose docker-compose --version apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common # 下一步未试验成功 add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/debian \\$(lsb_release -cs) stable\"   Get Docker Engine ↩︎\n RSSHub ↩︎\n  ","wordCount":"37","inLanguage":"en","datePublished":"2020-01-22T13:58:48+08:00","dateModified":"2020-01-22T13:58:48+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/rsshub_build/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"RssHub Test","name":"RssHub Test","description":"创建rsshub并实现订阅，实时查看","keywords":["rsshub","bulid","vps"],"articleBody":"创建环境 主要参考官网文档1和 RssHub2文档\n# docker network create freshrss-network version: '3' services: freshrss: image: freshrss/freshrss container_name: freshrss restart: always environment: CRON_MIN: '14,43' TZ: Asia/Shanghai volumes: - /root/freshrss/data:/var/www/FreshRSS/data - /root/freshrss/extensions:/var/www/FreshRSS/extensions ports: - '30305:80' - '30306:443' logging: driver: json-file options: max-size: 2m networks: default: external: name: freshrss-network version: '3' services: rsshub: image: diygod/rsshub restart: always ports: - '30309:1200' environment: NODE_ENV: production CACHE_TYPE: redis REDIS_URL: 'redis://redis:6379/' PUPPETEER_WS_ENDPOINT: 'ws://browserless:3000' depends_on: - redis - browserless browserless: # See issue 6680 image: browserless/chrome:1.43-chrome-stable restart: always redis: image: redis:alpine restart: always volumes: - ./redis-data:/data volumes: redis-data:   Get Docker Engine ↩︎\n RSSHub ↩︎\n  ","wordCount":"92","inLanguage":"en","datePublished":"2020-01-22T13:58:48+08:00","dateModified":"2020-01-22T13:58:48+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/rsshub_build/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -106,17 +106,60 @@ RssHub Test
 </div>
 <div class=post-content><h2 id=创建环境>创建环境<a hidden class=anchor aria-hidden=true href=#创建环境>#</a></h2>
 <p>主要参考官网文档<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>和 RssHub<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>文档</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>sudo curl -L <span style=color:#e6db74>&#34;https://github.com/docker/compose/releases/download/1.25.1/docker-compose-</span><span style=color:#66d9ef>$(</span>uname -s<span style=color:#66d9ef>)</span><span style=color:#e6db74>-</span><span style=color:#66d9ef>$(</span>uname -m<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span> -o /usr/local/bin/docker-compose
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=color:#75715e># docker network create freshrss-network</span>
+<span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3&#39;</span>
+<span style=color:#f92672>services</span>:
+  <span style=color:#f92672>freshrss</span>:
+    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>freshrss/freshrss</span>
+    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>freshrss</span>
+    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
+    <span style=color:#f92672>environment</span>:
+      <span style=color:#f92672>CRON_MIN</span>: <span style=color:#e6db74>&#39;14,43&#39;</span>
+      <span style=color:#f92672>TZ</span>: <span style=color:#ae81ff>Asia/Shanghai</span>
+    <span style=color:#f92672>volumes</span>:
+      - <span style=color:#ae81ff>/root/freshrss/data:/var/www/FreshRSS/data</span>
+      - <span style=color:#ae81ff>/root/freshrss/extensions:/var/www/FreshRSS/extensions</span>
+    <span style=color:#f92672>ports</span>:
+      - <span style=color:#e6db74>&#39;30305:80&#39;</span>
+      - <span style=color:#e6db74>&#39;30306:443&#39;</span>
+    <span style=color:#f92672>logging</span>:
+      <span style=color:#f92672>driver</span>: <span style=color:#ae81ff>json-file</span>
+      <span style=color:#f92672>options</span>:
+        <span style=color:#f92672>max-size</span>: <span style=color:#ae81ff>2m</span>
+<span style=color:#f92672>networks</span>:
+  <span style=color:#f92672>default</span>:
+    <span style=color:#f92672>external</span>:
+      <span style=color:#f92672>name</span>: <span style=color:#ae81ff>freshrss-network</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3&#39;</span>
 
-sudo chmod +x /usr/local/bin/docker-compose
+<span style=color:#f92672>services</span>:
+  <span style=color:#f92672>rsshub</span>:
+    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>diygod/rsshub</span>
+    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
+    <span style=color:#f92672>ports</span>:
+      - <span style=color:#e6db74>&#39;30309:1200&#39;</span>
+    <span style=color:#f92672>environment</span>:
+      <span style=color:#f92672>NODE_ENV</span>: <span style=color:#ae81ff>production</span>
+      <span style=color:#f92672>CACHE_TYPE</span>: <span style=color:#ae81ff>redis</span>
+      <span style=color:#f92672>REDIS_URL</span>: <span style=color:#e6db74>&#39;redis://redis:6379/&#39;</span>
+      <span style=color:#f92672>PUPPETEER_WS_ENDPOINT</span>: <span style=color:#e6db74>&#39;ws://browserless:3000&#39;</span>
+    <span style=color:#f92672>depends_on</span>:
+      - <span style=color:#ae81ff>redis</span>
+      - <span style=color:#ae81ff>browserless</span>
 
-docker-compose --version
+  <span style=color:#f92672>browserless</span>:
+    <span style=color:#75715e># See issue 6680</span>
+    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>browserless/chrome:1.43-chrome-stable</span>
+    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
 
-apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+  <span style=color:#f92672>redis</span>:
+    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>redis:alpine</span>
+    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
+    <span style=color:#f92672>volumes</span>:
+      - <span style=color:#ae81ff>./redis-data:/data</span>
 
-<span style=color:#75715e># 下一步未试验成功</span>
-add-apt-repository <span style=color:#e6db74>&#34;deb [arch=amd64] https://download.docker.com/linux/debian \$(lsb_release -cs) stable&#34;</span>
-
+<span style=color:#f92672>volumes</span>:
+  <span style=color:#f92672>redis-data</span>:
 </code></pre></div><section class=footnotes role=doc-endnotes>
 <hr>
 <ol>

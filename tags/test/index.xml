@@ -19,14 +19,5 @@
       <description>尝试进行异地同步和部署</description>
     </item>
     
-    <item>
-      <title>Hello World</title>
-      <link>https://suai.tk/posts/hello_world/</link>
-      <pubDate>Tue, 14 Jan 2020 09:48:23 +0800</pubDate>
-      
-      <guid>https://suai.tk/posts/hello_world/</guid>
-      <description>记录本博客基本的搭建发布过程</description>
-    </item>
-    
   </channel>
 </rss>
