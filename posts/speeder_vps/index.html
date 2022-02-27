@@ -36,7 +36,7 @@
 <meta name=twitter:title content="加速算法_VPS">
 <meta name=twitter:description content="记录vps的加速">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://suai.tk/posts/"},{"@type":"ListItem","position":2,"name":"加速算法_VPS","item":"https://suai.tk/posts/speeder_vps/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"加速算法_VPS","name":"加速算法_VPS","description":"记录vps的加速","keywords":["speed","vps"],"articleBody":"为了在已有 VPS 的基础上进行进一步的优化，有必要进行加速软件的安装。\n两种安装方法 一键安装脚本和手动安装的，推荐一件安装脚本。\n一键脚本 先安装内核，然后安装加速脚本\nwget -N --no-check-certificate \"https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh\" \u0026\u0026 chmod +x tcp.sh \u0026\u0026 ./tcp.sh 手动安装 注意事项   安装锐速需要降级系统内核，而安装 Google BBR 则需要升级系统内核，故两者不能同时安装。\n  安装锐速需要降级系统内核，有可能造成系统不稳定，故不建议将其应用在重要的生产环境中。\n  本教程只适用于 CentOS6 x64 和 CentOS7 x64 系统！\n  判断系统类型 uname -r 回车后，会输出当前系统的内核版本。主要分三种情况：\n 结果以 2 开头，例如 2.6.32-696.18.7.el6.x86_64。  这种输出结果说明我们的服务器为 CentOS6 x64 系统，大家直接查看第三步进行锐速安装即可。\n结果以 3 开头，例如 3.10.0-693.11.6.el7.x86_64。  这种输出结果说明我们的服务器为 CentOS7 x64 系统，大家直接查看第四步进行锐速安装即可。\n结果以 4 开头，例如 4.12.10-1.el7.elrepo.x86_64。  这种输出结果说明我们的服务器已经安装 Google BBR 拥塞控制算法，此时已经无法继续安装锐速。\nCentOS6 x64 系统安装锐速 如果在第二步中确定的服务器系统为 CentOS6 x64，那么请看这一步。\nwget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh \u0026\u0026 bash appex.sh install '2.6.32-642.el6.x86_64' 一路回车即可\nCentOS7 x64 系统安装锐速 如果在第二步中确定的服务器系统为 CentOS7 x64，那么请看这一步。 因为 CentOS7 X64 系统的内核版本太高，所以没办法直接安装锐速，我们需要对系统内核进行降级操作。\nwget --no-check-certificate -O rskernel.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/rskernel.sh \u0026\u0026 bash rskernel.sh 统会自动下载内核更换脚本并执行。按照下图提示，我们可以看到当前系统为 CentOS7 X64，同时脚本正在更换内核。\n内核更换完成后，会进行重启操作，这样才能成功更换内核\n服务器重启后， Xshell 的连接会断开\n服务器重启大概会耗时 2~3 分钟，我们耐心等待即可。\n重连以后输入一下命令：\nyum install net-tools -y \u0026\u0026 wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh \u0026\u0026 bash appex.sh install 回车即可\n锐速管理命令 本文中的锐速一键脚本提供了非常丰富的管理命令，大家可以按照下列命令进行锐速的管理。\n/appex/bin/serverSpeeder.sh status|start|stop|restart|uninstall 参考文章  CentOS6/7 专用破解版锐速一键安装脚本 - Vultr 中文网 ","wordCount":"130","inLanguage":"en","datePublished":"2020-02-11T15:44:55+08:00","dateModified":"2020-02-11T15:44:55+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/speeder_vps/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"加速算法_VPS","name":"加速算法_VPS","description":"记录vps的加速","keywords":["speed","vps"],"articleBody":"为了在已有 VPS 的基础上进行进一步的优化，有必要进行加速软件的安装。\n两种安装方法 一键安装脚本和手动安装的，推荐一件安装脚本。\n一键脚本 先安装内核，然后安装加速脚本\nwget -N --no-check-certificate \"https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh\" \u0026\u0026 chmod +x tcp.sh \u0026\u0026 ./tcp.sh 手动安装 注意事项   安装锐速需要降级系统内核，而安装 Google BBR 则需要升级系统内核，故两者不能同时安装。\n  安装锐速需要降级系统内核，有可能造成系统不稳定，故不建议将其应用在重要的生产环境中。\n  本教程只适用于 CentOS6 x64 和 CentOS7 x64 系统！\n  判断系统类型 uname -r 回车后，会输出当前系统的内核版本。主要分三种情况：\n 结果以 2 开头，例如 2.6.32-696.18.7.el6.x86_64。  这种输出结果说明我们的服务器为 CentOS6 x64 系统，大家直接查看第三步进行锐速安装即可。\n结果以 3 开头，例如 3.10.0-693.11.6.el7.x86_64。  这种输出结果说明我们的服务器为 CentOS7 x64 系统，大家直接查看第四步进行锐速安装即可。\n结果以 4 开头，例如 4.12.10-1.el7.elrepo.x86_64。  这种输出结果说明我们的服务器已经安装 Google BBR 拥塞控制算法，此时已经无法继续安装锐速。\nCentOS6 x64 系统安装锐速 如果在第二步中确定的服务器系统为 CentOS6 x64，那么请看这一步。\nwget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh \u0026\u0026 bash appex.sh install '2.6.32-642.el6.x86_64' 一路回车即可\nCentOS7 x64 系统安装锐速 如果在第二步中确定的服务器系统为 CentOS7 x64，那么请看这一步。 因为 CentOS7 X64 系统的内核版本太高，所以没办法直接安装锐速，我们需要对系统内核进行降级操作。\nwget --no-check-certificate -O rskernel.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/rskernel.sh \u0026\u0026 bash rskernel.sh 统会自动下载内核更换脚本并执行。按照下图提示，我们可以看到当前系统为 CentOS7 X64，同时脚本正在更换内核。\n内核更换完成后，会进行重启操作，这样才能成功更换内核\n服务器重启后， Xshell 的连接会断开\n服务器重启大概会耗时 2~3 分钟，我们耐心等待即可。\n重连以后输入一下命令：\nyum install net-tools -y \u0026\u0026 wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh \u0026\u0026 bash appex.sh install 回车即可\n锐速管理命令 本文中的锐速一键脚本提供了非常丰富的管理命令，大家可以按照下列命令进行锐速的管理。\n/appex/bin/serverSpeeder.sh status|start|stop|restart|uninstall 测速脚本 LemonBench.sh\nLemonBench工具(别名LBench、柠檬Bench)，是一款针对Linux服务器设计的服务器性能测试工具。通过综合测试，可以快速评估服务器的综合性能，为使用者提供服务器硬件配置信息。\n特点:\n 服务器基础信息(CPU信息/内存信息/Swap信息/磁盘空间信息等) Speedtest网速测试 (本地到最近源及国内各地域不同线路的网速) 磁盘测试(4K块/1M块 直接写入测试) 路由追踪测试(追踪到国内和海外不同线路的路由信息) Spoofer测试(获取详细网络信息，快速判断服务器接入线路)  使用： curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast\n参考文章  CentOS6/7 专用破解版锐速一键安装脚本 - Vultr 中文网 ","wordCount":"149","inLanguage":"en","datePublished":"2020-02-11T15:44:55+08:00","dateModified":"2020-02-11T15:44:55+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/speeder_vps/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -112,7 +112,9 @@
 <li>
 <a href=#centos7-x64-%e7%b3%bb%e7%bb%9f%e5%ae%89%e8%a3%85%e9%94%90%e9%80%9f aria-label="CentOS7 x64 系统安装锐速">CentOS7 x64 系统安装锐速</a></li>
 <li>
-<a href=#%e9%94%90%e9%80%9f%e7%ae%a1%e7%90%86%e5%91%bd%e4%bb%a4 aria-label=锐速管理命令>锐速管理命令</a></li></ul>
+<a href=#%e9%94%90%e9%80%9f%e7%ae%a1%e7%90%86%e5%91%bd%e4%bb%a4 aria-label=锐速管理命令>锐速管理命令</a></li>
+<li>
+<a href=#%e6%b5%8b%e9%80%9f%e8%84%9a%e6%9c%ac aria-label=测速脚本>测速脚本</a></li></ul>
 </li></ul>
 </li>
 <li>
@@ -179,7 +181,19 @@ bash appex.sh install
 <h4 id=锐速管理命令>锐速管理命令<a hidden class=anchor aria-hidden=true href=#锐速管理命令>#</a></h4>
 <p>本文中的锐速一键脚本提供了非常丰富的管理命令，大家可以按照下列命令进行锐速的管理。</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>/appex/bin/serverSpeeder.sh status|start|stop|restart|uninstall
-</code></pre></div><h2 id=参考文章>参考文章<a hidden class=anchor aria-hidden=true href=#参考文章>#</a></h2>
+</code></pre></div><h4 id=测速脚本>测速脚本<a hidden class=anchor aria-hidden=true href=#测速脚本>#</a></h4>
+<p>LemonBench.sh</p>
+<p>LemonBench工具(别名LBench、柠檬Bench)，是一款针对Linux服务器设计的服务器性能测试工具。通过综合测试，可以快速评估服务器的综合性能，为使用者提供服务器硬件配置信息。</p>
+<p>特点:</p>
+<ol>
+<li>服务器基础信息(CPU信息/内存信息/Swap信息/磁盘空间信息等)</li>
+<li>Speedtest网速测试 (本地到最近源及国内各地域不同线路的网速)</li>
+<li>磁盘测试(4K块/1M块 直接写入测试)</li>
+<li>路由追踪测试(追踪到国内和海外不同线路的路由信息)</li>
+<li>Spoofer测试(获取详细网络信息，快速判断服务器接入线路)</li>
+</ol>
+<p>使用： <code>curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast</code></p>
+<h2 id=参考文章>参考文章<a hidden class=anchor aria-hidden=true href=#参考文章>#</a></h2>
 <ol>
 <li><a href=https://www.vultrcn.com/7.html>CentOS6/7 专用破解版锐速一键安装脚本 - Vultr 中文网</a></li>
 </ol>

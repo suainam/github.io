@@ -82,44 +82,68 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>TEST
+<h2>惠普打印机问题解决
 </h2>
 </header>
 <section class=entry-content>
-<p>测试目标 不同主机，随时随地进行数据的更新和同步 自动对拉取数据进行检测，自动拉取主题 生成一键脚本来检测 themes 文件夹，如果主题文件夹为空，则进行相关主题拉取 脚本可以自动完成数据的一键提交, 数据的分发和同步 ...</p>
+<p>摘要 日前购买了一台惠普打印机，用家庭版windows打印日常资料都好好的，一切正常。 后来电脑重装了专业版，打印出现了问题，特搜索进行解决，并汇总：
+问题汇总 只能打印图片，无法打印文档 解决思路：对temp/tmp等文件进行权限编辑1。 操作： win+e–>属性–>高级系统设置–>高级–>环境变量 找到用户和系统的tmp/temp文件夹 对tmp/temp进行权限编辑，文件夹属性–>安全–编辑–>勾选完全控制 无法自动清空打印队列 解决思路：更换端口2 操作： 设置–>设备–>打印机和扫描仪 找到打印机–>管理–>打印机属性 端口，一般情况下应该是wsd。需要更换为tcp/ip 添加端口–>tcp/ip端口–>打印机地址–>自动适配更换成功 删除打印队列 问题描述：经过上面配置，但是打印队列依然存在以前打印成功的文档，无法自动清空3 操作： 停止打印功能 在Windows10->开始->运行，或者直接“windous+R”； 输入“services.msc” 按首字母找到“Print Spooler”, 右键停止； 清空缓存 进入路径“ C:\Windows\System32\Spool\Printers ” 全部删除缓存文件 重启打印功能 按首字母找到“Print Spooler”, 右键启动； 刷新打印机队列 参考文章 Windows 10下打印机不能打印Office文件解决办法_ITLionWoo的专栏-CSDN博客_右键临时目录并打印属性页 ↩︎
+惠普M706n打印机没法自动删除队列。 - 惠普支持社区 - 901949 ↩︎...</p>
 </section>
-<footer class=entry-footer><span title="2020-01-18 22:00:55 +0800 +0800">Sat Jan 18 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
-<a class=entry-link aria-label="post link to TEST" href=https://suai.tk/posts/test_differt_add/></a>
+<footer class=entry-footer><span title="2022-02-19 10:55:55 +0800 +0800">Sat Feb 19 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
+<a class=entry-link aria-label="post link to 惠普打印机问题解决" href=https://suai.tk/posts/questions_about_hp_printer/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>每日SQL三分钟_001
+<h2>使用宝塔搭建网站
 </h2>
 </header>
 <section class=entry-content>
-<p> SQL 基本概念及语句的执行顺序、在线教程和练习网站
-SQL 定义 Structured Query Language:
-文档参考
-维基百科 wiki 语法参考 SQLSERVER Oracle Google BigQuery 关键字
-with select distinct [case when then else end] as from (left|inner|right|full) [out] join where and or in exists like|rlike group by having order by limit union [all] ...</p>
+<p>vps 前期准备 安装基本的软件、更新和配置，详见建站探索 修改 python 默认的版本，详见建站探索 修改为密钥连接，详见使用密钥连接 VPS ...</p>
 </section>
-<footer class=entry-footer><span title="2020-01-17 10:51:42 +0800 +0800">Fri Jan 17 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
-<a class=entry-link aria-label="post link to 每日SQL三分钟_001" href=https://suai.tk/posts/sql3m_001/></a>
+<footer class=entry-footer><span title="2020-02-18 16:39:18 +0800 +0800">Tue Feb 18 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
+<a class=entry-link aria-label="post link to 使用宝塔搭建网站" href=https://suai.tk/posts/built_site_with_bt/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Hello World
+<h2>解决Github DNS污染
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 框架的选择：hugo Hugo-PaperMod主题 Hugo-GithubActions 部署的选择： GithubPages Netlify, 不再更新。Netlify, 参考 hugo 的 netlify 版块进行设计 Rsync2VPS ...</p>
+<p>最近 github 广东访问特别慢，新加坡的节点经常无响应，猜测应该是 DNS 污染导致，故而修改如下：
+...</p>
 </section>
-<footer class=entry-footer><span title="2020-01-14 09:48:23 +0800 +0800">Tue Jan 14 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
-<a class=entry-link aria-label="post link to Hello World" href=https://suai.tk/posts/hello_world/></a>
+<footer class=entry-footer><span title="2020-02-14 18:07:32 +0800 +0800">Fri Feb 14 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
+<a class=entry-link aria-label="post link to 解决Github DNS污染" href=https://suai.tk/posts/solve_dns_about_github/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>加速算法_VPS
+</h2>
+</header>
+<section class=entry-content>
+<p>为了在已有 VPS 的基础上进行进一步的优化，有必要进行加速软件的安装。
+...</p>
+</section>
+<footer class=entry-footer><span title="2020-02-11 15:44:55 +0800 +0800">Tue Feb 11 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
+<a class=entry-link aria-label="post link to 加速算法_VPS" href=https://suai.tk/posts/speeder_vps/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>宝塔面板域名使用CloudFlare进行隐藏
+</h2>
+</header>
+<section class=entry-content>
+<p>众所周知，宝塔面板是通过 ip:port/safeport 来进行访问的，这样会产生几个问题：
+...</p>
+</section>
+<footer class=entry-footer><span title="2020-02-10 13:04:16 +0800 +0800">Mon Feb 10 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
+<a class=entry-link aria-label="post link to 宝塔面板域名使用CloudFlare进行隐藏" href=https://suai.tk/posts/btpanel_domain_proxy_with_cf/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
 <a class=prev href=https://suai.tk/posts/page/2/>« Prev Page</a>
+<a class=next href=https://suai.tk/posts/page/4/>Next Page »</a>
 </nav>
 </footer>
 </main>
