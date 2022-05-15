@@ -9,11 +9,7 @@
 <meta name=description content="从数据学习, 思而不学则殆">
 <meta name=author content="Suai">
 <link rel=canonical href=https://suai.tk/>
-<meta name=google-site-verification content="XYZabc">
-<meta name=yandex-verification content="XYZabc">
-<meta name=msvalidate.01 content="XYZabc">
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.48a18943c2fc15c38a372b8dde1f5e5dc0bc64fa6cb90f5a817d2f8c76b7f3ae.css integrity="sha256-SKGJQ8L8FcOKNyuN3h9eXcC8ZPpsuQ9agX0vjHa3864=" rel="preload stylesheet" as=style>
-<link rel=preload href=/android-chrome-512x512.png as=image>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.ec8da366ca2fb647537ccb7a8f6fa5b4e9cd3c7a0d3171dd2d3baad1e49c8bfc.css integrity="sha256-7I2jZsovtkdTfMt6j2+ltOnNPHoNMXHdLTuq0eSci/w=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://suai.tk/%3Clink%20/%20abs%20url%3E>
 <link rel=icon type=image/png sizes=16x16 href=https://suai.tk/%3Clink%20/%20abs%20url%3E>
 <link rel=icon type=image/png sizes=32x32 href=https://suai.tk/%3Clink%20/%20abs%20url%3E>
@@ -83,9 +79,9 @@
 <header class=entry-header>
 <h1>DataLearning 👋</h1>
 </header>
-<section class=entry-content>
+<div class=entry-content>
 <p>Learn in Data</p>
-</section>
+</div>
 <footer class=entry-footer>
 <div class=social-icons>
 <a href=https://github.com/suainam/ target=_blank rel="noopener noreferrer me" title=Github><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
@@ -104,9 +100,9 @@
 <h2>最佳实践-树莓派
 </h2>
 </header>
-<section class=entry-content>
+<div class=entry-content>
 <p>树莓派 系统安装 github仓库：Debian-Pi-Aarch64/README_zh.md at master · openfans-community-offical/Debian-Pi-Aarch64 # md5校验 20b944d9645de361568a2f3e310f925e ./2021-01-03-OPENFANS-Debian-Buster-Aarch64-ext4-v2021-2.0-U6-Release-plus++.img 296cfa92e91d8c92324c2dcbb142ea92 ./2021-01-03-OPENFANS-Debian-Buster-Aarch64-ext4-v2021-2.0-U6-Release-plus++.img.xz # vim /etc/ssh/sshd_config PermitRootLogin yes systemctl disable network-manager # 安装zerotier curl -s https://install.zerotier.com | sudo bash sudo zerotier-cli join 6ab565387a498da5 sudo systemctl enable zerotier-one sudo systemctl status zerotier-one 系统备份 备份脚本,以 root 的身份。nanhantianyi/rpi-backup: raspberry pi backup，树莓派系统备份，最小镜像备份 git clone --depth=1 https://hub.fastgit.org/nanhantianyi/rpi-backup.git # 安装7z sudo apt install p7zip-full mkdir -p /media/share-hm/share/bkp/rasp cd /media/share-hm/share/bkp/rasp bash ~/rpi-backup/back.sh raspberry-stable-v2raya-1230.img 7z a raspberry-stable....</p>
-</section>
+</div>
 <footer class=entry-footer><span title="2022-02-27 02:10:30 +0800 +0800">Sun Feb 27 2022</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Suai</footer>
 <a class=entry-link aria-label="post link to 最佳实践-树莓派" href=https://suai.tk/posts/best_raspberry/></a>
 </article>
@@ -115,9 +111,9 @@
 <h2>404公益
 </h2>
 </header>
-<section class=entry-content>
+<div class=entry-content>
 <p>QQ404 公益 &lt;!DOCTYPE html> &lt;html lang="en"> &lt;head> &lt;meta char-set="utf-8" /> &lt;title>404&lt;/title> &lt;link rel="icon" herf="image/YTHP_icon.ico" type="image/x-icon" /> &lt;/head> &lt;body> &lt;script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homePageUrl="product.php" homePageName="返回" >&lt;/script> &lt;/body> &lt;/html> </p>
-</section>
+</div>
 <footer class=entry-footer><span title="2022-02-27 01:13:03 +0800 +0800">Sun Feb 27 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
 <a class=entry-link aria-label="post link to 404公益" href=https://suai.tk/posts/404_pages/></a>
 </article>
@@ -126,9 +122,9 @@
 <h2>最佳实践-Python爬虫
 </h2>
 </header>
-<section class=entry-content>
+<div class=entry-content>
 <p>selenimu + webdriver python -m pip install selenium apt upgrade -y && apt update -y wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo apt-get -f install && dpkg -i google-chrome-stable_current_amd64.deb google-chrome --version # http://chromedriver.storage.googleapis.com/index.html wget http://chromedriver.storage.googleapis.com/87.0.4280.20/chromedriver_linux64.zip unzip chromedriver_linux64.zip whereis google-chrome chromedriver --version 脚本编写 import os from selenium import webdriver from selenium.webdriver.chrome.options import Options chrome_options = Options() chrome_options.add_argument("--no-sandbox") chrome_options.add_argument("--headless") chrome_options.add_argument("--disable-dev-shm-usage") chrome_options.add_argument("--disable-gpu") chrome_options.add_argument("--hide-scrollbars") chrome_options.add_argument("blink-settings=imagesEnabled=false") d = webdriver.Chrome(r"/usr/bin/chromedriver", chrome_options=chrome_options) d.get("https://www.baidu.com") print("hao123" in d.page_source) d.close() </p>
-</section>
+</div>
 <footer class=entry-footer><span title="2022-02-27 01:03:36 +0800 +0800">Sun Feb 27 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
 <a class=entry-link aria-label="post link to 最佳实践-Python爬虫" href=https://suai.tk/posts/best_python_scripy/></a>
 </article>
@@ -137,9 +133,9 @@
 <h2>最佳实践-ZSH
 </h2>
 </header>
-<section class=entry-content>
+<div class=entry-content>
 <p>安装 zsh sudo apt install -y zsh sudo zsh --version && sudo chsh -s $(which zsh) sudo echo $SHELL && $SHELL --version 问题：zsh: corrupt history file /home/pi/.zsh_history cp .zsh_history zsh_history && rm -f .zsh_history && strings zsh_history .zsh_history zinit 优化 仓库地址，zinit, 安装依赖 # 安装依赖 sudo apt install subversion make gcc curl -R -O http://www.lua.org/ftp/lua-5.4.2.tar.gz tar zxf lua-5.4.2.tar.gz cd lua-5.4.2 && make all test && make install lua -v && cd ....</p>
-</section>
+</div>
 <footer class=entry-footer><span title="2022-02-27 00:38:58 +0800 +0800">Sun Feb 27 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Suai</footer>
 <a class=entry-link aria-label="post link to 最佳实践-ZSH" href=https://suai.tk/posts/best_zsh/></a>
 </article>
@@ -148,15 +144,15 @@
 <h2>常用小脚本
 </h2>
 </header>
-<section class=entry-content>
-<p>大文件清理 du -h --max-depth=1 | grep G | sort -n cron 20 12 17-20 11 * /home/esm/esm-env/bin/python /home/esm/cfg/esm.py >> /home/esm/esm.log 2>&1 & 删除文件 find . -ctime +12 -iname "*.img" -print | xargs -i rm -rf {} ; find . -size -100M \( -iname "*.img" -o -iname "*.7z" \) -print | xargs -i rm -rf {} ; </p>
-</section>
+<div class=entry-content>
+<p>大文件清理 du -h --max-depth=1 | grep G | sort -n cron 20 12 17-20 11 * /home/esm/esm-env/bin/python /home/esm/cfg/esm.py >> /home/esm/esm.log 2>&1 & 0 21 * * * nohup pipenv run python ./lexin_m.py >/dev/null 2>log & 0 4 */3 * * /sbin/shutdown -r +1 >> /root/log/reboot.log 2>&1 & 删除文件 find . -ctime +12 -iname "*.img" -print | xargs -i rm -rf {} ; find . -size -100M \( -iname "*.img" -o -iname "*....</p>
+</div>
 <footer class=entry-footer><span title="2022-02-27 00:29:35 +0800 +0800">Sun Feb 27 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
 <a class=entry-link aria-label="post link to 常用小脚本" href=https://suai.tk/posts/best_scripts/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
-<a class=next href=https://suai.tk/page/2/>Next Page »</a>
+<a class=next href=https://suai.tk/page/2/>Next »</a>
 </nav>
 </footer>
 </main>
