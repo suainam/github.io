@@ -3,21 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://suai.tk/categories/</loc>
-    <lastmod>2022-02-27T02:10:30+08:00</lastmod>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
   </url><url>
     <loc>https://suai.tk/</loc>
-    <lastmod>2022-02-27T02:10:30+08:00</lastmod>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
+  </url><url>
+    <loc>https://suai.tk/tags/linux/</loc>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
   </url><url>
     <loc>https://suai.tk/posts/</loc>
-    <lastmod>2022-02-27T02:10:30+08:00</lastmod>
-  </url><url>
-    <loc>https://suai.tk/tags/raspberry/</loc>
-    <lastmod>2022-02-27T02:10:30+08:00</lastmod>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
   </url><url>
     <loc>https://suai.tk/tags/</loc>
-    <lastmod>2022-02-27T02:10:30+08:00</lastmod>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
   </url><url>
     <loc>https://suai.tk/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
+  </url><url>
+    <loc>https://suai.tk/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
+  </url><url>
+    <loc>https://suai.tk/posts/gitea_docker_with/</loc>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
+  </url><url>
+    <loc>https://suai.tk/tags/%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2022-06-11T14:26:21+08:00</lastmod>
+  </url><url>
+    <loc>https://suai.tk/tags/raspberry/</loc>
     <lastmod>2022-02-27T02:10:30+08:00</lastmod>
   </url><url>
     <loc>https://suai.tk/posts/best_raspberry/</loc>
@@ -26,16 +38,7 @@
     <loc>https://suai.tk/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc>
     <lastmod>2022-02-27T02:10:30+08:00</lastmod>
   </url><url>
-    <loc>https://suai.tk/tags/%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2022-02-27T02:10:30+08:00</lastmod>
-  </url><url>
     <loc>https://suai.tk/posts/404_pages/</loc>
-    <lastmod>2022-02-27T01:13:03+08:00</lastmod>
-  </url><url>
-    <loc>https://suai.tk/tags/linux/</loc>
-    <lastmod>2022-02-27T01:13:03+08:00</lastmod>
-  </url><url>
-    <loc>https://suai.tk/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2022-02-27T01:13:03+08:00</lastmod>
   </url><url>
     <loc>https://suai.tk/tags/python/</loc>

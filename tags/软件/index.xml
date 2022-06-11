@@ -9,7 +9,16 @@
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Feb 2022 01:13:03 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jun 2022 14:26:21 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>部署Gitea</title>
+      <link>https://suai.tk/posts/gitea_docker_with/</link>
+      <pubDate>Sat, 11 Jun 2022 14:26:21 +0800</pubDate>
+      
+      <guid>https://suai.tk/posts/gitea_docker_with/</guid>
+      <description>最佳实践：linux下面使用docker完成Gitea的部署</description>
+    </item>
+    
     <item>
       <title>404公益</title>
       <link>https://suai.tk/posts/404_pages/</link>
