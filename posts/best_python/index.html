@@ -32,7 +32,7 @@
 <meta name=twitter:title content="Python学习">
 <meta name=twitter:description content="最佳实践：python环境配置">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://suai.tk/posts/"},{"@type":"ListItem","position":2,"name":"Python学习","item":"https://suai.tk/posts/best_python/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Python学习","name":"Python学习","description":"最佳实践：python环境配置","keywords":["配置","python","学习"],"articleBody":"python # 软连接新版本 whereis python sudo ln -s /usr/local/bin/python3.9 /usr/bin/python3 sudo rm /usr/bin/python sudo ln -s /usr/bin/python3 /usr/bin/python vscode  pylance提示导入模块有问题, 在配置中添加项目根目录  \"python.analysis.extraPaths\": [ \"./src\",\"./python\" // 自定义模块的相对路径，可多个，可绝对路径 \"./modules\" ] python手动安装 sudo apt update sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev curl -O https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tar.xz tar -xf Python-* \u0026\u0026 cd Python-* ./configure --enable-optimizations \u0026\u0026 make -j 4 \u0026\u0026 sudo make altinstall # 如果出错 # E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable) # E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it? sudo lsof /var/lib/dpkg/lock sudo kill -9  sudo rm /var/lib/dpkg/lock sudo dpkg --configure -a ","wordCount":"108","inLanguage":"en","datePublished":"2022-02-27T00:25:46+08:00","dateModified":"2022-02-27T00:25:46+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/best_python/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Python学习","name":"Python学习","description":"最佳实践：python环境配置","keywords":["配置","python","学习"],"articleBody":"python手动安装 apt update apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev curl -O https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tar.xz tar -xf Python-* \u0026\u0026 cd Python-* ./configure --enable-optimizations \u0026\u0026 make altinstall rm -rf Python-* # 如果安装出错 # E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable) # E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it? sudo lsof /var/lib/dpkg/lock sudo kill -9  sudo rm /var/lib/dpkg/lock sudo dpkg --configure -a pip curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py # 下载安装脚本 python get-pip.py # 运行安装脚本 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple 切换版本  软连接新版本  whereis python sudo ln -s /usr/local/bin/python3.9 /usr/bin/python3 sudo rm /usr/bin/python sudo ln -s /usr/bin/python3 /usr/bin/python 使用update-alternatives  update-alternatives --list python #注意：update-alternatives --install     #1.一般情况下，直接使用 /usr/bin/python 即可 #2.即为需要更换的python #3.为需要添加的python版本的安装路径，可以在上文中确定 #4.为优先级。数字越大，优先级越高 update-alternatives --install /usr/bin/python python /usr/local/bin/python3.10 3 update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2 update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1 update-alternatives --config python 包管理  PDM  pdm --pep582  ~/.zshrc pdm config --local pypi.url https://pypi.tuna.tsinghua.edu.cn/simple vscode  pylance提示导入模块有问题, 在配置中添加项目根目录  \"python.analysis.extraPaths\": [ \"./src\",\"./python\" // 自定义模块的相对路径，可多个，可绝对路径 \"./modules\" ] ","wordCount":"173","inLanguage":"en","datePublished":"2022-02-27T00:25:46+08:00","dateModified":"2022-02-27T00:25:46+08:00","author":{"@type":"Person","name":"Suai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://suai.tk/posts/best_python/"},"publisher":{"@type":"Organization","name":"DataLearning","logo":{"@type":"ImageObject","url":"https://suai.tk/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -94,23 +94,75 @@ Python学习
 </summary>
 <div class=inner><ul>
 <li>
-<a href=#python aria-label=python>python</a></li>
+<a href=#python%e6%89%8b%e5%8a%a8%e5%ae%89%e8%a3%85 aria-label=python手动安装>python手动安装</a><ul>
 <li>
-<a href=#vscode aria-label=vscode>vscode</a></li>
+<a href=#pip aria-label=pip>pip</a></li></ul>
+</li>
 <li>
-<a href=#python%e6%89%8b%e5%8a%a8%e5%ae%89%e8%a3%85 aria-label=python手动安装>python手动安装</a>
+<a href=#%e5%88%87%e6%8d%a2%e7%89%88%e6%9c%ac aria-label=切换版本>切换版本</a></li>
+<li>
+<a href=#%e5%8c%85%e7%ae%a1%e7%90%86 aria-label=包管理>包管理</a></li>
+<li>
+<a href=#vscode aria-label=vscode>vscode</a>
 </li>
 </ul>
 </div>
 </details>
 </div>
-<div class=post-content><h2 id=python>python<a hidden class=anchor aria-hidden=true href=#python>#</a></h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 软连接新版本</span>
-whereis python
+<div class=post-content><h2 id=python手动安装>python手动安装<a hidden class=anchor aria-hidden=true href=#python手动安装>#</a></h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt update
+apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev
+curl -O https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tar.xz
+tar -xf Python-* <span style=color:#f92672>&amp;&amp;</span> cd Python-*
+./configure --enable-optimizations <span style=color:#f92672>&amp;&amp;</span> make altinstall
+
+rm -rf Python-*
+
+<span style=color:#75715e># 如果安装出错</span>
+<span style=color:#75715e># E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)</span>
+<span style=color:#75715e># E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?</span>
+sudo lsof /var/lib/dpkg/lock
+sudo kill -9 &lt;pid&gt;
+sudo rm /var/lib/dpkg/lock
+sudo dpkg --configure -a
+</code></pre></div><h3 id=pip>pip<a hidden class=anchor aria-hidden=true href=#pip>#</a></h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   <span style=color:#75715e># 下载安装脚本</span>
+python get-pip.py    <span style=color:#75715e># 运行安装脚本</span>
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre></div><h2 id=切换版本>切换版本<a hidden class=anchor aria-hidden=true href=#切换版本>#</a></h2>
+<ol>
+<li>软连接新版本</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>whereis python
 
 sudo ln -s /usr/local/bin/python3.9 /usr/bin/python3
 sudo rm /usr/bin/python
 sudo ln -s /usr/bin/python3 /usr/bin/python
+</code></pre></div><ol start=2>
+<li>使用<code>update-alternatives</code></li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>update-alternatives --list python
+
+<span style=color:#75715e>#注意：update-alternatives --install &lt;link&gt; &lt;name&gt; &lt;path&gt; &lt;priority&gt;</span>
+<span style=color:#75715e>#1.&lt;link&gt;一般情况下，直接使用 /usr/bin/python 即可</span>
+<span style=color:#75715e>#2.&lt;name&gt;即为需要更换的python</span>
+<span style=color:#75715e>#3.&lt;path&gt;为需要添加的python版本的安装路径，可以在上文中确定</span>
+<span style=color:#75715e>#4.&lt;priorit&gt;为优先级。数字越大，优先级越高</span>
+
+update-alternatives --install /usr/bin/python python /usr/local/bin/python3.10 <span style=color:#ae81ff>3</span>
+update-alternatives --install /usr/bin/python python /usr/bin/python3.7 <span style=color:#ae81ff>2</span>
+update-alternatives --install /usr/bin/python python /usr/bin/python2.7 <span style=color:#ae81ff>1</span>
+
+update-alternatives --config python
+</code></pre></div><h2 id=包管理>包管理<a hidden class=anchor aria-hidden=true href=#包管理>#</a></h2>
+<ol>
+<li><a href=https://pdm.fming.dev/latest/#recommended-installation-method>PDM</a></li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>pdm --pep582 &gt;&gt; ~/.zshrc
+
+pdm config --local pypi.url https://pypi.tuna.tsinghua.edu.cn/simple
 </code></pre></div><h2 id=vscode>vscode<a hidden class=anchor aria-hidden=true href=#vscode>#</a></h2>
 <ol>
 <li>pylance提示导入模块有问题, 在配置中添加项目根目录</li>
@@ -119,20 +171,6 @@ sudo ln -s /usr/bin/python3 /usr/bin/python
     <span style=color:#e6db74>&#34;./src&#34;</span>,<span style=color:#e6db74>&#34;./python&#34;</span> // 自定义模块的相对路径，可多个，可绝对路径
     <span style=color:#e6db74>&#34;./modules&#34;</span>
 <span style=color:#f92672>]</span>
-</code></pre></div><h2 id=python手动安装>python手动安装<a hidden class=anchor aria-hidden=true href=#python手动安装>#</a></h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo apt update
-sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev
-curl -O https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tar.xz
-tar -xf Python-* <span style=color:#f92672>&amp;&amp;</span> cd Python-*
-./configure --enable-optimizations <span style=color:#f92672>&amp;&amp;</span> make -j <span style=color:#ae81ff>4</span> <span style=color:#f92672>&amp;&amp;</span> sudo make altinstall
-
-<span style=color:#75715e># 如果出错</span>
-<span style=color:#75715e># E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)</span>
-<span style=color:#75715e># E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?</span>
-sudo lsof /var/lib/dpkg/lock
-sudo kill -9 &lt;pid&gt;
-sudo rm /var/lib/dpkg/lock
-sudo dpkg --configure -a
 </code></pre></div>
 </div>
 <footer class=post-footer>
