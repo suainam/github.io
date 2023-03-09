@@ -5,11 +5,30 @@
     <link>https://suai.tk/tags/</link>
     <description>Recent content in Tags on DataLearning</description>
     <image>
+      <title>DataLearning</title>
       <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 11 Jun 2022 14:26:21 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Mar 2023 10:08:35 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>conf.d</title>
+      <link>https://suai.tk/tags/conf.d/</link>
+      <pubDate>Thu, 09 Mar 2023 10:08:35 +0800</pubDate>
+      
+      <guid>https://suai.tk/tags/conf.d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>https://suai.tk/tags/nginx/</link>
+      <pubDate>Thu, 09 Mar 2023 10:08:35 +0800</pubDate>
+      
+      <guid>https://suai.tk/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://suai.tk/tags/linux/</link>
