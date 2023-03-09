@@ -111,6 +111,18 @@ Learn in Data
 </article>
 <article class=post-entry>
 <header class=entry-header>
+<h2>包管理_Windows
+</h2>
+</header>
+<div class=entry-content>
+<p>3种包管理器 winget chocolatey scoop1 使用powershell管理员模式安装 Set-ExecutionPolicy RemoteSigned -scope CurrentUser; 指定安装目录和软件全局安装目录, 在环境变量中配置好(安装目录/shims目录/全局安装目录) $env:SCOOP='D:\\Program Files\\Scoop' $env:SCOOP_GLOBAL='D:\\Program Files\\scoop_softs' 使用国内镜像安装 iwr -useb https://gitee.com/glsnames/scoop-installer/raw/master/bin/install.ps1 | iex 添加bucket scoop config SCOOP_REPO 'https://gitee.com/glsnames/scoop-installer' scoop bucket add extras https://gitee.com/scoop-bucket/extras.git scoop bucket add scoopet https://github.com/ivaquero/scoopet.git scoop update aria2加速下载及启用代理（如有冲突，可择机关闭） scoop config proxy 127.0.0.1:10809 scoop config proxy scoop install aria2 scoop config aria2-enabled false scoop install sudo 官网https://scoop.sh/ ↩︎
+</p>
+</div>
+<footer class=entry-footer><span title="2022-06-16 23:32:10 +0800 +0800">Thu Jun 16 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
+<a class=entry-link aria-label="post link to 包管理_Windows" href=https://suai.tk/posts/best_package_manager/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>部署Gitea
 </h2>
 </header>
@@ -141,17 +153,6 @@ Learn in Data
 </div>
 <footer class=entry-footer><span title="2022-02-27 01:13:03 +0800 +0800">Sun Feb 27 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
 <a class=entry-link aria-label="post link to 404公益" href=https://suai.tk/posts/404_pages/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>最佳实践-Python爬虫
-</h2>
-</header>
-<div class=entry-content>
-<p>selenimu + webdriver python -m pip install selenium apt upgrade -y && apt update -y wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo apt-get -f install && dpkg -i google-chrome-stable_current_amd64.deb google-chrome --version # http://chromedriver.storage.googleapis.com/index.html wget http://chromedriver.storage.googleapis.com/87.0.4280.20/chromedriver_linux64.zip unzip chromedriver_linux64.zip whereis google-chrome chromedriver --version 脚本编写 import os from selenium import webdriver from selenium.webdriver.chrome.options import Options chrome_options = Options() chrome_options.add_argument("--no-sandbox") chrome_options.add_argument("--headless") chrome_options.add_argument("--disable-dev-shm-usage") chrome_options.add_argument("--disable-gpu") chrome_options.add_argument("--hide-scrollbars") chrome_options.add_argument("blink-settings=imagesEnabled=false") d = webdriver.Chrome(r"/usr/bin/chromedriver", chrome_options=chrome_options) d.get("https://www.baidu.com") print("hao123" in d.page_source) d.close() </p>
-</div>
-<footer class=entry-footer><span title="2022-02-27 01:03:36 +0800 +0800">Sun Feb 27 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Suai</footer>
-<a class=entry-link aria-label="post link to 最佳实践-Python爬虫" href=https://suai.tk/posts/best_python_scripy/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

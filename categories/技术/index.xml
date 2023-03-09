@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>包管理_Windows</title>
+      <link>https://suai.tk/posts/best_package_manager/</link>
+      <pubDate>Thu, 16 Jun 2022 23:32:10 +0800</pubDate>
+      
+      <guid>https://suai.tk/posts/best_package_manager/</guid>
+      <description>最佳实践：Windows下面电脑软件的搭配情况，确保高效、安全</description>
+    </item>
+    
+    <item>
       <title>部署Gitea</title>
       <link>https://suai.tk/posts/gitea_docker_with/</link>
       <pubDate>Sat, 11 Jun 2022 14:26:21 +0800</pubDate>
