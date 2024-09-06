@@ -9,16 +9,16 @@
       <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 14 Feb 2020 18:07:32 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/%E8%AE%BF%E9%97%AE%E6%85%A2/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.119.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Feb 2020 18:07:32 +0800</lastBuildDate>
+    <atom:link href="https://suai.tk/tags/%E8%AE%BF%E9%97%AE%E6%85%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决Github DNS污染</title>
       <link>https://suai.tk/posts/solve_dns_about_github/</link>
       <pubDate>Fri, 14 Feb 2020 18:07:32 +0800</pubDate>
-      
       <guid>https://suai.tk/posts/solve_dns_about_github/</guid>
       <description>通过修改hosts来解决github访问缓慢、下载缓慢问题</description>
     </item>
-    
   </channel>
 </rss>

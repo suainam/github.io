@@ -9,16 +9,16 @@
       <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 22 Jan 2020 11:47:04 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/answer/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.119.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 Jan 2020 11:47:04 +0800</lastBuildDate>
+    <atom:link href="https://suai.tk/tags/answer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>建站历程</title>
       <link>https://suai.tk/posts/bulit_site_hist/</link>
       <pubDate>Wed, 22 Jan 2020 11:47:04 +0800</pubDate>
-      
       <guid>https://suai.tk/posts/bulit_site_hist/</guid>
       <description>SSH连接、网站搭建发布、学习过程中碰到的问题收集</description>
     </item>
-    
   </channel>
 </rss>

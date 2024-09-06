@@ -9,16 +9,16 @@
       <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Mar 2023 10:08:35 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/conf.d/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.119.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 09 Mar 2023 10:08:35 +0800</lastBuildDate>
+    <atom:link href="https://suai.tk/tags/conf.d/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nginx配置</title>
       <link>https://suai.tk/posts/best_scripts/</link>
       <pubDate>Thu, 09 Mar 2023 10:08:35 +0800</pubDate>
-      
       <guid>https://suai.tk/posts/best_scripts/</guid>
       <description>最佳实践：nginx配置</description>
     </item>
-    
   </channel>
 </rss>

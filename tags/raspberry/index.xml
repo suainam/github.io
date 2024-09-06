@@ -9,16 +9,16 @@
       <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Feb 2022 02:10:30 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.119.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Feb 2022 02:10:30 +0800</lastBuildDate>
+    <atom:link href="https://suai.tk/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>最佳实践-树莓派</title>
       <link>https://suai.tk/posts/best_raspberry/</link>
       <pubDate>Sun, 27 Feb 2022 02:10:30 +0800</pubDate>
-      
       <guid>https://suai.tk/posts/best_raspberry/</guid>
       <description>最佳实践：树莓派相关系统安装、系统固化、软件安装等等</description>
     </item>
-    
   </channel>
 </rss>

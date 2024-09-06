@@ -9,16 +9,16 @@
       <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 11 Feb 2020 15:44:55 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/speed/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.119.0</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Feb 2020 15:44:55 +0800</lastBuildDate>
+    <atom:link href="https://suai.tk/tags/speed/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>加速算法_VPS</title>
       <link>https://suai.tk/posts/speeder_vps/</link>
       <pubDate>Tue, 11 Feb 2020 15:44:55 +0800</pubDate>
-      
       <guid>https://suai.tk/posts/speeder_vps/</guid>
       <description>记录vps的加速</description>
     </item>
-    
   </channel>
 </rss>

@@ -9,25 +9,23 @@
       <url>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://suai.tk/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Feb 2020 16:39:18 +0800</lastBuildDate><atom:link href="https://suai.tk/tags/bt/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.119.0</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Feb 2020 16:39:18 +0800</lastBuildDate>
+    <atom:link href="https://suai.tk/tags/bt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用宝塔搭建网站</title>
       <link>https://suai.tk/posts/built_site_with_bt/</link>
       <pubDate>Tue, 18 Feb 2020 16:39:18 +0800</pubDate>
-      
       <guid>https://suai.tk/posts/built_site_with_bt/</guid>
       <description>记录使用宝塔搭建网站的历程</description>
     </item>
-    
     <item>
       <title>宝塔面板域名使用CloudFlare进行隐藏</title>
       <link>https://suai.tk/posts/btpanel_domain_proxy_with_cf/</link>
       <pubDate>Mon, 10 Feb 2020 13:04:16 +0800</pubDate>
-      
       <guid>https://suai.tk/posts/btpanel_domain_proxy_with_cf/</guid>
       <description>使用CloudFlare进行宝塔面板域名的反代</description>
     </item>
-    
   </channel>
 </rss>
